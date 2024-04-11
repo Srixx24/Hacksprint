@@ -795,3 +795,416 @@ function loadRandomBackground(backgroundJson) {
   }
 }
 
+
+// Function: Sets the background image
+function setBackgroundImage() {
+  // let videoElement = document.getElementById("backdropvid");
+  let imageElement = document.getElementById("backdropimg");
+  let backgroundImageUrl = window.newTab.background.link;
+
+  // Console logging for debugging purposes
+  console.log("Default background:");
+  console.log(backgroundImageUrl);
+
+  let fileExtension = backgroundImageUrl.substring(backgroundImageUrl.length - 3).toLowerCase();
+  // if (fileExtension == 'jpg' || fileExtension == 'png' || fileExtension == 'gif') { // If the file type is an image
+    window.newTab.background.fileType = "image";
+    imageElement.src = backgroundImageUrl;
+    imageElement.style = "";
+    imageElement.onload = function() {
+      imageElement.style.opacity = 100;
+      $('#progress-line').css("opacity", "0");
+      // To counteract a bug that makes the background start from the bottom
+      window.scrollTo(0, 0);
+    }
+}
+
+// Function: Creates a background menu switch and adds it to the background menu
+function createBackgroundMenuSwitch(name, key, bkMenu, index, backList) {
+  // Create HTML elements for the menu item, text, and switch
+  var menuItemNode = createHTMLElement("<div class=\"menuItem\" data=\"" + "\"></div>");
+  var textNode = createHTMLElement("<div class=\"menuText\">" + name + "</div>");
+  var switchWrapperNode = createHTMLElement("<div class=\"sliderWrapper\"> <label class=\"switch\"> <input type=\"checkbox\" ID=\"" + key + "\" checked> <span class=\"slider round\"></span> </label> </div>");
+  menuItemNode.appendChild(textNode);
+  menuItemNode.appendChild(switchWrapperNode);
+  bkMenu.insertBefore(menuItemNode, document.getElementById("favoriteSlider"));
+
+  // Adding an onClick event listener for the switches
+  document.getElementById(key).parentElement.onclick = function() {
+    var switchElement = this.firstElementChild;
+    var storageObject = {};
+    var switchKey = switchElement.id;
+    if (switchElement.checked) {
+      switchElement.checked = false;
+      storageObject[switchKey] = "off";
+      chrome.storage.local.set(storageObject, function() {});
+    } else {
+      switchElement.checked = true;
+      storageObject[switchKey] = "on";
+      chrome.storage.local.set(storageObject, function() {});
+    }
+  }
+
+  // Add source to each element of the list
+  let listToPush = backList[index].list;
+  for (var i = 0; i < listToPush.length; i++) {
+    listToPush[i]["source"] = name;
+  }
+
+  // Store and retrieve data from Chrome to determine whether it was on or off
+  chrome.storage.local.get(storageObject, function(data) {
+    if (data[key] == 'off') {
+      document.getElementById(key).checked = false;
+    } else {
+      window.newTab.backlist.push(...listToPush);
+    }
+    index += 1;
+    loadSource(backList);
+  });
+}
+
+// Call the function to create and load the background menu switches
+loadBackgroundMenuSwitches();
+
+
+// Function: Load language strings into the UI
+function loadLanguageStrings(langJson) {
+  window.newTab.langStrings = langJson;
+}
+
+// Function: Set the language and load language strings
+function setLanguage(lang) {
+  return new Promise(function(resolve, reject) {
+    const langUrl = chrome.runtime.getURL('locales/' + lang + '.json');
+    fetch(langUrl)
+      .then((response) => response.json())
+      .then((json) => {
+        loadLanguageStrings(json);
+        resolve(lang);
+      });
+  });
+}
+
+// Function: Get and determine the language to use
+function getLanguage(configJson) {
+  return new Promise(function(resolve, reject) {
+    chrome.storage.local.get({
+      lang: ""
+    }, function(data) {
+      let lang = navigator.language;
+
+      // Default language (find user locale)
+      if (data.lang === "") {
+        window.newTab.config = configJson;
+
+        // If navigator.language not found
+        if (configJson.locales.indexOf(lang) == -1) {
+          // Drop area code
+          lang = lang.substring(0, lang.indexOf('-'))
+        }
+
+        // If language still not found, default to default locale
+        if (configJson.locales.indexOf(lang) == -1) {
+          lang = configJson.default_locale;
+        }
+      } else {
+        lang = data.lang;
+      }
+      setLanguage(lang)
+        .then((lang) => resolve(lang));
+    });
+  });
+}
+
+// When the document is ready
+$(document).ready(function() {
+  // Define custom global objects
+  window.newTab = {};
+  window.newTab.clock = {};
+  window.newTab.confirmSettings = {};
+  window.newTab.confirmSettings.animation = 'opacity';
+
+  // Print console warning
+  console.log("%c--- Danger Zone ---", "color: red; font-size: 25px");
+  console.log("%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a feature or \"hack\", it is likely a scam.", "font-size: 16px;");
+  console.log("%cIf you ARE a developer, feel free to check this project out here:", "font-size: 16px;");
+  console.log("%chttps://github.com/emilyxietty/", "font-size: 16px;");
+
+  // $('#progress-line').css("display", "flex");
+  const configUrl = chrome.runtime.getURL('resources/config.json');
+  fetch(configUrl)
+    .then((response) => response.json())
+    .then((json) => getLanguage(json))
+    .then((lang) => {
+
+      // If Chrome is online
+      if (window.navigator.onLine) {
+        // Load the background JSON
+        const jsonUrl = chrome.runtime.getURL('resources/background_' + lang + '.json');
+        fetch(jsonUrl)
+          .then((response) => response.json())
+          .then((json) => loadBackground(json));
+
+      } else {
+        // Send an error alert for no internet connection
+        $.alert({
+          title: 'Error',
+          content: 'No internet access. Please check your connection and try again.',
+          type: 'red',
+          boxWidth: '25%',
+          backgroundDismiss: true,
+          useBootstrap: false,
+          typeAnimated: true,
+          theme: 'dark',
+          animation: window.newTab.confirmSettings.animation,
+          closeAnimation: window.newTab.confirmSettings.animation,
+          animateFromElement: false,
+          scrollToPreviousElement: false,
+          buttons: {
+            close: {
+              text: "Close",
+              action: function() {
+                $('#progress-line').css("opacity", "0");
+              }
+            }
+          }
+        });
+      }
+    });
+});
+
+// Define the list of search engines
+window.newTab.searchEngines = [
+  {
+    "action": "https://www.google.com/search",
+    "placeholder": "Google Search"
+  },
+  {
+    "action": "https://www.bing.com/search",
+    "placeholder": "Bing Search"
+  },
+  {
+    "action": "https://search.yahoo.com/search",
+    "placeholder": "Yahoo Search"
+  }
+];
+
+
+// Prevent right-click context menu
+// document.addEventListener('contextmenu', event => event.preventDefault());
+
+// Initialize default time settings
+window.newTab.clock.military = false;
+
+// Make elements draggable
+dragElement(document.getElementById("timeWrapper"));
+dragElement(document.getElementById("searchWrapper"));
+dragElement(document.getElementById("todoWrapper"));
+dragElement(document.getElementById('infoWrapper'));
+
+// Load data/settings from Chrome storage
+
+// Load clock settings
+chrome.storage.local.get({
+  time_switch: 'on',
+  time_top_data: '',
+  time_left_data: '',
+  military_switch: 'off'
+}, function(data) {
+  // Check clock settings and apply
+  if (data.time_switch == 'off') {
+    document.getElementById("timeSwitch").checked = false;
+    document.getElementById("timeWrapper").classList.add("exit");
+    document.getElementById("timeWrapper").classList.add("firstStart");
+  } else {
+    document.getElementById("timeSwitch").checked = true;
+    document.getElementById("timeWrapper").classList.add("entrance");
+  }
+  // Set clock position
+  if (data.time_top_data != '') {
+    document.getElementById("timeWrapper").style.top = data.time_top_data;
+  }
+  if (data.time_left_data != '') {
+    document.getElementById("timeWrapper").style.left = data.time_left_data;
+  }
+  // Set military time format
+  window.newTab.clock.military = (data.military_switch == 'on');
+
+  // Start the clock
+  startTime();
+});
+
+
+ //getting the searchbar settings
+  chrome.storage.local.get({
+    search_switch: 'on',
+    search_top_data: '',
+    search_left_data: '',
+    search_engine: 0
+  }, function(data) {
+    if (data.search_switch == 'off') {
+      document.getElementById("searchSwitch").checked = false;
+      document.getElementById("searchWrapper").classList.add("exit");
+      document.getElementById("searchWrapper").classList.add("firstStart");
+    } else {
+      document.getElementById("searchSwitch").checked = true;
+      document.getElementById("searchWrapper").classList.add("entrance");
+    }
+    if (data.search_top_data != '') {
+      document.getElementById("searchWrapper").style.top = data.search_top_data;
+    }
+    if (data.search_left_data != '') {
+      document.getElementById("searchWrapper").style.left = data.search_left_data;
+    }
+
+    let searchInput = $('#searchInput');
+    searchInput.parent().attr('action', window.newTab.searchEngines[data.search_engine].action);
+    searchInput.attr('data-placeholder', window.newTab.searchEngines[data.search_engine].placeholder);
+    searchInput.val(window.newTab.searchEngines[data.search_engine].placeholder);
+  });
+
+
+  //load the background filters
+  chrome.storage.local.get({
+    filter: [35, 90, 100, 0]
+  }, function(data) {
+    document.getElementById("darkSlider").value = data.filter[0];
+    document.getElementById("satuSlider").value = data.filter[1];
+    document.getElementById("conSlider").value = data.filter[2];
+    document.getElementById("blurSlider").value = data.filter[3];
+    updateFilter();
+  });
+
+
+// Load todo list data from Chrome storage and parse it
+chrome.storage.local.get({
+  todo_switch: 'on',
+  todo_top_data: '',
+  todo_left_data: '',
+  todo_data: ''
+}, function(data) {
+  // Check todo list settings and apply
+  if (data.todo_switch == 'off') {
+    document.getElementById("todoSwitch").checked = false;
+    document.getElementById("todoWrapper").classList.add("exit");
+    document.getElementById("todoWrapper").classList.add("firstStart");
+  } else {
+    document.getElementById("todoSwitch").checked = true;
+    document.getElementById("todoWrapper").classList.add("entrance");
+  }
+  // Set todo list position
+  if (data.todo_top_data != '') {
+    document.getElementById("todoWrapper").style.top = data.todo_top_data;
+  }
+  if (data.todo_left_data != '') {
+    document.getElementById("todoWrapper").style.left = data.todo_left_data;
+  }
+  // Parse todo list data and populate
+  if (data.todo_data != '') {
+    let arr = data.todo_data.split("×");
+    for (i = 0; i < arr.length - 1; i++) {
+      let li;
+      if (arr[i].indexOf("☑") != -1) {
+        li = newListItem(String(arr[i]).slice(1), true); // Create list item with checkbox checked
+      } else {
+        li = newListItem(arr[i], false); // Create list item with checkbox unchecked
+      }
+      document.getElementById("myUL").appendChild(li);
+    }
+  } else {
+    document.getElementById("todoInput").style = ""; // Show todo input if no data
+  }
+});
+
+
+// Add event listeners for switches
+document.getElementById("searchSwitch").parentElement.addEventListener('click', function() {
+  updateSearch(); // Update search settings
+});
+document.getElementById("searchChange").addEventListener("click", function() {
+  changeSearch(); // Change search engine
+});
+document.getElementById("timeSwitch").parentElement.addEventListener('click', function() {
+  updateTime(); // Update time settings
+});
+document.getElementById("infoSwitch").parentElement.addEventListener('click', function() {
+  updateinfo(); // Update info settings
+});
+document.getElementById("info").addEventListener("click", function() {
+  updateInfoMode(); // Update info mode
+});
+document.getElementById("favSwitch").parentElement.addEventListener('click', function() {
+  updateFav(); // Update favorite settings
+});
+document.getElementById("todoSwitch").parentElement.addEventListener('click', function() {
+  updateTodo(); // Update todo settings
+});
+document.getElementById("time").addEventListener("click", function() {
+  updateMilitary(); // Update military time
+});
+
+// Add event listeners for filter sliders
+document.getElementById("darkSlider").addEventListener("input", function() {
+  updateFilter(); // Update dark filter
+});
+document.getElementById("satuSlider").addEventListener("input", function() {
+  updateFilter(); // Update saturation filter
+});
+document.getElementById("conSlider").addEventListener("input", function() {
+  updateFilter(); // Update contrast filter
+});
+document.getElementById("blurSlider").addEventListener("input", function() {
+  updateFilter(); // Update blur filter
+});
+
+// Window focus and blur listeners
+chrome.tabs.onActivated.addListener(autoPause); // Automatically pause on window blur
+
+// Make the todo list sortable
+$("#myUL").sortable({
+  start: function() {
+    document.activeElement.blur(); // Remove focus from active element
+    document.getElementById("myUL").style = "cursor: -webkit-grabbing !important; cursor: grabbing !important;"; // Change cursor style
+  },
+  update: function() {
+    saveTodo(); // Save todo list changes
+  },
+  stop: function() {
+    document.getElementById("myUL").style = ""; // Reset cursor style
+  }
+});
+
+// Set placeholders for input elements
+let inputs = [];
+inputs.push(document.getElementById("todoInput"));
+inputs.push(document.getElementById("searchInput"));
+for (let i = 0; i < inputs.length; i++) {
+  inputs[i].value = inputs[i].getAttribute('data-placeholder'); // Set initial value as placeholder
+  inputs[i].addEventListener('focus', function() {
+    if (this.value == this.getAttribute('data-placeholder')) {
+      this.value = ''; // Clear placeholder value on focus
+    }
+  });
+  inputs[i].addEventListener('blur', function() {
+    if (this.value == '') {
+      this.value = this.getAttribute('data-placeholder'); // Restore placeholder value on blur if empty
+    }
+  });
+}
+
+
+// Event listener for adding todo items when Enter key is pressed
+$(".todoInput").on('keyup', function(e) {
+  if (e.keyCode == 13) { // Check if Enter key is pressed
+    let inputValue = document.getElementById("todoInput").value.trim(); // Get input value
+    if (inputValue != '') { // Check if input value is not empty
+      let li = newListItem(inputValue, false); // Create new todo list item
+      document.getElementById("todoInput").value = ""; // Clear input value
+      document.getElementById("todoInput").style = "display: none;"; // Hide input element
+      document.getElementById("myUL").appendChild(li); // Append new list item to todo list
+      setEndOfContenteditable(li); // Set focus at the end of list item
+      li.focus(); // Focus on new list item
+      saveTodo(); // Save todo list
+    }
+  }
+});
