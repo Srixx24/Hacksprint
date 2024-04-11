@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800;1,600&display=swap');
+
+/* CSS to prevent scrolling */
+body {
+  overflow: hidden; /* Prevent scrolling */
+  background-color: #999; /* Set background color */
+  margin: 0px; /* Remove default margin */
+  font-family: "Open Sans"; /* Set font family */
+  user-select: none; /* Disable text selection */
+}
+
+/* CSS for h2 elements */
+h2 {
+  font-weight: 700; /* Set font weight to bold */
+}
+
+/* CSS for loading bar */
+#progress-line,
+#progress-line:before {
+  height: 1px; /* Set height */
+  width: 100%; /* Set width to fill the container */
+  margin: 0; /* Remove margin */
+}
+
+/* CSS for progress line */
+#progress-line {
+  background-color: rgba(255, 255, 255, 0); /* Set background color with transparency */
+  display: -webkit-flex; /* Enable flexbox layout (for older WebKit browsers) */
+  display: flex; /* Enable flexbox layout */
+}
+
+#progress-line:before {
+  background-color: rgba(255, 255, 255, 0.6); /* Set background color with transparency */
+  content: ''; /* Add empty content */
+  -webkit-animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite; /* Apply animation for WebKit browsers */
+  animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite; /* Apply animation */
+}
+
+/* Animation keyframes for progress line */
+@keyframes running-progress {
+  0% {
+    left: -100%; /* Start position */
+  }
+  100% {
+    left: 100%; /* End position */
+  }
+}
+
+/* Keyframes for WebKit-specific progress line animation */
+@-webkit-keyframes running-progress {
+  /* At 0% progress, the line starts at the left edge of its container */
+  0% {
+    margin-left: 0px;
+    margin-right: 100%;
+  }
+
+  /* At 50% progress, the line is partially visible */
+  50% {
+    margin-left: 25%;
+    margin-right: 0%;
+  }
+
+  /* At 100% progress, the line reaches the right edge of its container */
+  100% {
+    margin-left: 100%;
+    margin-right: 0;
+  }
+}
+
+/* Keyframes for running-progress animation */
+@keyframes running-progress {
+  /* At 0% progress, the line starts at the left edge of its container */
+  0% {
+    margin-left: 0px;
+    margin-right: 100%;
+  }
+
+  /* At 50% progress, the line is partially visible */
+  50% {
+    margin-left: 25%;
+    margin-right: 0%;
+  }
+
+  /* At 100% progress, the line reaches the right edge of its container */
+  100% {
+    margin-left: 100%;
+    margin-right: 0;
+  }
+}
+
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px; /* Set the width of the scrollbar */
+}
+
+/* Scrollbar thumb styles */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.17); /* Set the background color of the scrollbar thumb */
+  border-radius: 4px; /* Apply border radius to the scrollbar thumb */
+}
+
+/* Remove focus border for input elements */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none; /* Remove the focus outline */
+}
+
+/* Background wrapper styles */
+.backloader {
+  text-align: center; /* Center align the content */
+  padding: 0px; /* Set padding to zero */
+  border: 0px; /* Remove border */
+  margin: 0px; /* Remove margin */
+  width: 100%; /* Set width to 100% */
+  position: absolute; /* Set position to absolute */
+  bottom: 0; /* Align to the bottom */
+  left: 0; /* Align to the left */
+  min-height: 100%; /* Set minimum height to 100% */
+  height: 100%; /* Set height to 100% */
+  background-color: #151f2e; /* Set background color */
+
+  filter: brightness(1) saturation(0.9) blur(0px) contrast(100%); /* Set filter properties */
+  transition: 0s; /* Set transition duration to 0s */
+  z-index: 1; /* Set z-index to 1 */
+
+/* Background image and video transitions */
+#backdropimg, #backdropvid {
+  transition: 0.5s; /* Set transition duration to 0.5s */
+  opacity: 0; /* Set initial opacity to 0 */
+}
+
+/* Desaturate filter */
+#desaFilter {
+  min-width: 100%; /* Set minimum width to 100% */
+  min-height: 100%; /* Set minimum height to 100% */
+  transition: 0.3s; /* Set transition duration to 0.3s */
+}
+
+/* Decontrast filter */
+#deconFilter {
+  min-width: 100%; /* Set minimum width to 100% */
+  min-height: 100%; /* Set minimum height to 100% */
+  transition: 0.3s; /* Set transition duration to 0.3s */
+}
+
+/* Time widget */
+.time {
+  color: rgba(255, 255, 255, 0.85); /* Text color */
+  font-family: "Open Sans"; /* Font family */
+  user-select: none; /* Prevent text selection */
+  font-weight: 600; /* Font weight */
+  font-size: 12vw; /* Font size */
+  margin-bottom: 12px; /* Bottom margin */
+  margin-top: 30px; /* Top margin */
+  cursor: pointer; /* Cursor style */
+}
+
+/* AM/PM text element */
+.pa {
+  color: rgba(255, 255, 255, 0.5); /* Text color */
+  font-family: "open sans"; /* Font family */
+  font-weight: 400; /* Font weight */
+  font-size: 2vw; /* Font size */
+  position: absolute; /* Positioning */
+  top: calc(9vw + 5px); /* Top position */
+  right: -20%; /* Right position */
+}
+
+/* Time widget element */
+.info {
+  color: rgba(255, 255, 255, 0.8); /* Text color */
+  font-family: "open sans"; /* Font family */
+  user-select: none; /* Prevent text selection */
+  font-weight: 340; /* Font weight */
+  font-size: calc(12px + .7vw); /* Font size */
+  cursor: pointer; /* Cursor style */
+}
+
+/* Search widget */
+.search {
+  padding: 5px; /* Padding */
+  border-radius: 7px; /* Border radius */
+  color: rgba(255, 255, 255, 0.5); /* Text color */
+  background-color: rgba(255, 255, 255, 0) !important; /* Background color */
+  font-size: 20px; /* Font size */
+  font-family: "HelveticaNeue-Light", "open sans Light", "open sans", Helvetica, Arial, "Lucida Grande", sans-serif; /* Font family */
+  font-weight: 100; /* Font weight */
+  width: 18vw; /* Width */
+  border-color: rgba(255, 255, 255, 0.2) !important; /* Border color */
+}
+
+/* Movable part of search widget */
+.searchDiv {
+  padding: 5px; /* Padding */
+  cursor: move; /* Cursor style */
+}
+
+/* Change search button */
+#searchChange {
+  position: absolute; /* Positioning */
+  top: 35%; /* Top position */
+  right: -25px; /* Right position */
+  font-size: 20px; /* Font size */
+  cursor: pointer; /* Cursor style */
+  color: rgba(255, 255, 255, 0); /* Text color */
+  transition: 0.25s; /* Transition duration */
+  user-select: none; /* Prevent text selection */
+}
+
+#searchChange:hover {
+  color: rgba(255, 255, 255, 0.3); /* Text color on hover */
+}
+
+/* Wrappers for widgets */
+.timeWrapper {
+  position: absolute; /* Positioning */
+  top: 60%; /* Top position */
+  left: 7%; /* Left position */
+  z-index: 5; /* Stack order */
+  opacity: 0; /* Opacity */
+}
+
+.searchWrapper {
+  position: absolute; /* Positioning */
+  top: 85%; /* Top position */
+  left: 7%; /* Left position */
+  z-index: 5; /* Stack order */
+  opacity: 0; /* Opacity */
+}
+
+.todoWrapper {
+  position: absolute; /* Positioning */
+  background: transparent; /* Background color */
+  top: 10%; /* Top position */
+  left: 5%; /* Left position */
+  width: calc(250px + 10vw); /* Width */
+  z-index: 5; /* Stack order */
+  opacity: 0; /* Opacity */
+}
+
+/* Setting todolist hover to be visible */
+.todoHover {
+  background-color: rgba(0, 0, 0, 0); /* Transparent background */
+  border-radius: 10px; /* Border radius */
+}
+
+.todoHover:hover {
+  background-color: rgba(0, 0, 0, 0.4) !important; /* Semi-transparent background on hover */
+  transition: 0.2s; /* Smooth transition */
+}
+
+.todoHover:hover .todoInput::placeholder {
+  color: rgba(255, 255, 255, 0.55); /* Placeholder text color on hover */
+  transition: 0.2s; /* Smooth transition */
+}
+
+/* Right Menus */
+#rightMenus {
+  padding-top: 10px; /* Top padding */
+  background-color: rgba(0, 0, 0, 0); /* Transparent background */
+  z-index: 7; /* Stack order */
+  position: absolute; /* Positioning */
+  top: 0; /* Top position */
+  right: 0; /* Right position */
+  height: 100%; /* Full height */
+  width: 22px; /* Initial width */
+  overflow: hidden; /* Hide overflow content */
+  padding-left: 20px; /* Left padding */
+  font-size: 10px; /* Font size */
+  font-family: "open sans"; /* Font family */
+  transition: all .2s cubic-bezier(.68, -0.2, .27, 1.55); /* Transition */
+}
+
+#rightMenus:hover {
+  background-color: rgba(0, 0, 0, 0); /* Transparent background on hover */
+  width: 350px; /* Expanded width on hover */
+  overflow: auto !important; /* Show scrollbar on hover */
+  scrollbar-color: rgba(255, 255, 255, 0.1) rgba(0, 0, 0, 0); /* Scrollbar color */
+  scrollbar-width: thin; /* Scrollbar width */
+}
+
+#rightMenus:hover ::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+#rightMenus:hover #bkList,
+#rightMenus:hover #bkTitle {
+  opacity: 0.7 !important; /* Semi-transparent on hover */
+  visibility: visible; /* Visible */
+  transition: all .17s ease; /* Transition */
+}
+
+
