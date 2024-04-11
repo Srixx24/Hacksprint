@@ -1,27 +1,258 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Chrome Extension</title>
-    <style>
-        /* Add your CSS styles here */
-        body {
-            font-family: Arial, sans-serif;
-        }
-    </style>
+  <!-- Metadata -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Title -->
+  <title>Reality Check</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="boop">
+  <link rel="stylesheet" href="boop">
+  <link rel="stylesheet" type="text/css" href="styles/index.css">
+
+  <!-- External Fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://openweathermap.org/weather-conditions#Weather-Condition-Codes-2" rel="stylesheet">
+
+  <!-- External JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="boop"></script>
+  <script type="text/javascript" src="boop"></script>
+  <script type="text/javascript" src="boop"></script>
+  <script type="text/javascript" src="scripts/index.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="scripts/weather.js"></script>
+  <script type="text/javascript" src="scripts/hidetoggle.js"></script>
+  <script type="text/javascript" src="boop"></script>
+
 </head>
+
 <body>
-    <h1>Welcome to My Chrome Extension!</h1>
-    <p>This is a basic HTML template for creating a Chrome extension.</p>
 
-    <!-- Add your extension's UI elements here -->
+  <!-- Background -->
+  <div class="backloader" id="backloader" style="">
+    <!-- Progress line -->
+    <div id="progress-line"></div>
+    <!-- Background image -->
+    <img src="" id="backdropimg" class="backdrop" draggable="false" width="100%">
+    <!-- Background video -->
+    <video id="backdropvid" class="backdrop" width="100%" loop autoplay style="display: none;">
+      <source src="" type="video/mp4">
+    </video>
+  </div>
 
-    <script>
-        // Add your JavaScript code here
-        document.addEventListener('DOMContentLoaded', function () {
-            // Your initialization code here
-        });
-    </script>
+  <!-- Menu -->
+  <div id="menu">
+  </div>
+
+    <!-- Time switch -->
+    <div id="infoMenuItem">
+      <div class="sliderWrapper2">
+        <label class="switch">
+          <input type="checkbox" id="timeSwitch" checked>
+          <span class="slider round"></span>
+        </label>
+        <span class="menuText">⏰ time</span>
+      </div>
+    </div>
+
+    <!-- Search bar switch -->
+    <div id="infoMenuItem">
+      <div class="sliderWrapper">
+        <label class="switch">
+          <input type="checkbox" id="searchSwitch" checked>
+          <span class="slider round"></span>
+        </label>
+        <span class="menuText">🔍 Search Bar</span>
+      </div>
+    </div>
+
+    <!-- Todo switch -->
+    <div id="infoMenuItem">
+      <div class="sliderWrapper">
+        <label class="switch">
+          <input type="checkbox" id="todoSwitch" checked>
+          <span class="slider round"></span>
+        </label>
+        <span class="menuText" id="infoMenuText">📝 Todo</span>
+      </div>
+    </div>
+   
+
+    <!-- Sliders for brightness, saturation, contrast, blur -->
+    <div class="slidecontainer">
+      <div class="menuText2" style="text-align: center">brightness</div>
+      <input type="range" min="10" max="120" value="35" class="rangeSlider" id="darkSlider">
+    </div>
+    <div class="slidecontainer">
+      <div class="menuText2" style="text-align: center">saturation</div>
+      <input type="range" min="0" max="180" value="90" class="rangeSlider" id="satuSlider">
+    </div>
+    <div class="slidecontainer">
+      <div class="menuText2" style="text-align: center">contrast</div>
+      <input type="range" min="40" max="140" value="100" class="rangeSlider" id="conSlider">
+    </div>
+    <div class="slidecontainer">
+      <div class="menuText2" style="text-align: center">blur</div>
+      <input type="range" min="0" max="120" value="0" class="rangeSlider" id="blurSlider">
+    </div>
+    <!-- Buttons -->
+    <div class="btn-group-3" role="group" aria-label="Basic example">
+      <div class=" buttonWrapper">
+        <button id="advButton" class="btn btn-dark">
+          <i class="material-icons buttIcons md-36">settings</i>
+        </button>
+      </div>
+      <div class=" buttonWrapper">
+        <button id="aboutButton" class="btn btn-dark">
+          <i class="material-icons buttIcons md-36">info</i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Blank space -->
+    <div class="menuText" style="color: transparent !important; font-size: 34px;">.</div>
+  </div>
+
+  <!-- Time widget -->
+  <div class="timeWrapper" id="timeWrapper">
+    <h1 class="time" id="time"></h1>
+    <div class="pa" id="pa"></div>
+  </div>
+
+  <!-- Info widget -->
+  <div class="infoWrapper" id="infoWrapper">
+    <div class="info" id="info"></div>
+  </div>
+
+  <!-- Search bar widget -->
+  <div class="searchWrapper" id="searchWrapper">
+    <div class="searchDiv" id="searchDiv"></div>
+    <form id=search action="https://www.google.com/search" method="get">
+      <input id="searchInput" class="search" data-placeholder=" Google Search" type="searh" name="q" autocomplete="off" />
+      <input type="submit" style="display: none;" />
+    </form>
+    <div id="searchChange">⯈</div>
+  </div>
+
+  <!-- Todo list widget -->
+  <div class="todoWrapper" id="todoWrapper">
+    <div class="todoHover">
+      <div id="todoDiv" class="header">
+        <h2 style="margin:5px">to-do list</h2>
+      </div>
+      <ul id="myUL">
+      </ul>
+      <input class="todoInput" autocomplete="off" type="text" id="todoInput" style="display: none;" placeholder="New Item . . ." />
+    </div>
+  </div>
+
+  <!-- RightMenus side panel -->
+  <div id="rightMenus">
+    <!-- Widgets -->
+    <div id="menuText" class="top-space">
+      <div class="widgetcont">
+        <div class="row">
+          <div class="column">
+            <div class="widget-box" id="content">
+
+              <!--  images  -->
+
+              <center id="totgif"><img src="boop" width="120"/></center>
+              <center id="chigif"><img src="boop" width="120"/></center>
+              <center id="calgif"><img src="boop" width="120"/></center>
+              <center id="sopgif"><img src="boop" width="120"/></center>
+            </div>
+          </div>
+          <div class="column">
+            <div class="weather-box" id="content1">
+
+              <!-- Weather information -->
+              <ol class="weather-icon"><img src="icons/load1.gif" width="50"/></ol>
+              <div id="weather" style="color: rgba(255,255,255,0.9)"></div>
+              <div id="temperature" style="!important; padding-left: 0.5em !important; color: rgba(255,255,255,0.9) !important; font-size: 1.8rem !important;font-weight: 700;"></div>
+              <ol id="description" style="color: rgba(255,255,255,0.9)"></ol>
+              <ol id="location" style="color: rgba(255,255,255,0.9)"></ol>
+              <ol id="ico" style="color: rgba(255,255,255,0.0)";></ol>
+            </div>
+          </div>
+        </div>
+        <div class="break"></div>
+      </div>
+     
+            <!-- Embedded YouTube videos -->
+            <iframe width="100%" src="boop" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+          </div>
+        </div>
+
+
+        <!-- Avatar buttons -->
+        <div class="centeredwidget">
+          <div class="break"/>
+
+          <!-- Right panel preferences -->
+          <div id="otherright" class="hidden">
+            <div id="content" class="content">
+              <div class="btn-toolbar text-right" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group mr-0 text-right" role="group" aria-label="First group">
+
+                  <!-- Avatar options -->
+                  <button role="button" class="btn btn-outline-dark" id="boop">1</button>
+                  <button role="button" class="btn btn-outline-dark" id="boop">2</button>
+                  <button role="button" class="btn btn-outline-dark" id="boop">3</button>
+                  <button role="button" class="btn btn-outline-dark" id="boop">4</button>
+                </div>
+              </div>
+            </div>
+          </div>
+	 
+          <!-- Toggle preferences -->
+          <div class="break">
+            <span>show preferences</span>
+            <label class="switch">
+              <input type='checkbox' id='hideright'>
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <!-- Right panel settings -->
+          <div id="rightpref" class="hidden">
+            <span>Weather</span>
+            <label class="switch">
+              <input type='checkbox' class= 'weatherswitch'id='hideshow1' checked>
+              <span class="slider round"></span>
+            </label>
+
+  
+            <div class="hideshow3wrapper" id="hideshow3wrapper">
+              <span>music</span>
+              <label class="switch">
+                <input type='checkbox' id='hideshow3' checked>
+                <span class="slider round"></span>
+              </label>
+            </div>
+            <div class="break">
+              <span>avatar</span>
+              <label class="switch">
+                <input type='checkbox' id='hideshow' checked>
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
+
+<!-- External Scripts -->
+<script src="weather.js"></script>
+
 </html>
