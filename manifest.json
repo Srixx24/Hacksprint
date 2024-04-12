@@ -6,8 +6,7 @@
   "description": "Hacksprint Reality project",
   "permissions": ["storage", "bookmarks", "geolocation"],
   "icons": {
-    "pug": "puggy pixel.jpg",
-    "kitty": "kitty.png"
+    "pug": "puggy pixel.jpg"
   },
   "chrome_url_overrides": {
     "newtab": "index.html"
