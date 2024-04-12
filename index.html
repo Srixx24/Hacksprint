@@ -37,7 +37,7 @@
 <body>
 
   <!-- Background -->
-  <div class="backloader" id="backloader" style="">
+  <div class="backloader" id="backloader" style="display: none;">
     <!-- Progress line -->
     <div id="progress-line"></div>
     <!-- Background image -->
@@ -74,18 +74,6 @@
       </div>
     </div>
 
-    <!-- Todo switch -->
-    <div id="infoMenuItem">
-      <div class="sliderWrapper">
-        <label class="switch">
-          <input type="checkbox" id="todoSwitch" checked>
-          <span class="slider round"></span>
-        </label>
-        <span class="menuText" id="infoMenuText">📝 Todo</span>
-      </div>
-    </div>
-   
-
     <!-- Sliders for brightness, saturation, contrast, blur -->
     <div class="slidecontainer">
       <div class="menuText2" style="text-align: center">brightness</div>
@@ -99,10 +87,7 @@
       <div class="menuText2" style="text-align: center">contrast</div>
       <input type="range" min="40" max="140" value="100" class="rangeSlider" id="conSlider">
     </div>
-    <div class="slidecontainer">
-      <div class="menuText2" style="text-align: center">blur</div>
-      <input type="range" min="0" max="120" value="0" class="rangeSlider" id="blurSlider">
-    </div>
+
     <!-- Buttons -->
     <div class="btn-group-3" role="group" aria-label="Basic example">
       <div class=" buttonWrapper">
@@ -142,18 +127,6 @@
     <div id="searchChange">⯈</div>
   </div>
 
-  <!-- Todo list widget -->
-  <div class="todoWrapper" id="todoWrapper">
-    <div class="todoHover">
-      <div id="todoDiv" class="header">
-        <h2 style="margin:5px">to-do list</h2>
-      </div>
-      <ul id="myUL">
-      </ul>
-      <input class="todoInput" autocomplete="off" type="text" id="todoInput" style="display: none;" placeholder="New Item . . ." />
-    </div>
-  </div>
-
   <!-- RightMenus side panel -->
   <div id="rightMenus">
     <!-- Widgets -->
@@ -161,23 +134,12 @@
       <div class="widgetcont">
         <div class="row">
           <div class="column">
-            <div class="widget-box" id="content">
-
-              <!--  images  -->
-
-              <center id="totgif"><img src="boop" width="120"/></center>
-              <center id="chigif"><img src="boop" width="120"/></center>
-              <center id="calgif"><img src="boop" width="120"/></center>
-              <center id="sopgif"><img src="boop" width="120"/></center>
-            </div>
-          </div>
-          <div class="column">
             <div class="weather-box" id="content1">
 
               <!-- Weather information -->
               <ol class="weather-icon"><img src="icons/load1.gif" width="50"/></ol>
               <div id="weather" style="color: rgba(255,255,255,0.9)"></div>
-              <div id="temperature" style="!important; padding-left: 0.5em !important; color: rgba(255,255,255,0.9) !important; font-size: 1.8rem !important;font-weight: 700;"></div>
+              <div id="temperature" style="padding-left: 0.5em; color: rgba(255,255,255,0.9); font-size: 1.8rem; font-weight: 700;"></div>
               <ol id="description" style="color: rgba(255,255,255,0.9)"></ol>
               <ol id="location" style="color: rgba(255,255,255,0.9)"></ol>
               <ol id="ico" style="color: rgba(255,255,255,0.0)";></ol>
@@ -186,29 +148,11 @@
         </div>
         <div class="break"></div>
       </div>
-     
-            <!-- Embedded YouTube videos -->
-            <iframe width="100%" src="boop" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
-          </div>
-        </div>
-
-
-        <!-- Avatar buttons -->
-        <div class="centeredwidget">
-          <div class="break"/>
 
           <!-- Right panel preferences -->
           <div id="otherright" class="hidden">
             <div id="content" class="content">
               <div class="btn-toolbar text-right" role="toolbar" aria-label="Toolbar with button groups">
-                <div class="btn-group mr-0 text-right" role="group" aria-label="First group">
-
-                  <!-- Avatar options -->
-                  <button role="button" class="btn btn-outline-dark" id="boop">1</button>
-                  <button role="button" class="btn btn-outline-dark" id="boop">2</button>
-                  <button role="button" class="btn btn-outline-dark" id="boop">3</button>
-                  <button role="button" class="btn btn-outline-dark" id="boop">4</button>
-                </div>
               </div>
             </div>
           </div>
@@ -228,22 +172,6 @@
               <input type='checkbox' class= 'weatherswitch'id='hideshow1' checked>
               <span class="slider round"></span>
             </label>
-
-  
-            <div class="hideshow3wrapper" id="hideshow3wrapper">
-              <span>music</span>
-              <label class="switch">
-                <input type='checkbox' id='hideshow3' checked>
-                <span class="slider round"></span>
-              </label>
-            </div>
-            <div class="break">
-              <span>avatar</span>
-              <label class="switch">
-                <input type='checkbox' id='hideshow' checked>
-                <span class="slider round"></span>
-              </label>
-            </div>
           </div>
         </div>
       </div>
