@@ -20,7 +20,7 @@ async function getWeather() {
 
     const { latitude, longitude } = position.coords;
     const api = "https://api.openweathermap.org/data/2.5/weather";
-    const apiKey = "d311ada8928d1db50516795d4b5b07af";
+    const apiKey = "f146799a557e8ab658304c1b30cc3cfd";
     const url = `${api}?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
 
     const response = await fetch(url);
