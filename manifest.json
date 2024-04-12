@@ -5,9 +5,6 @@
   "short_name": "Reality",
   "description": "Hacksprint Reality project",
   "permissions": ["storage", "bookmarks", "geolocation"],
-  "icons": {
-    "pug": "puggy pixel.jpg"
-  },
   "chrome_url_overrides": {
     "newtab": "index.html"
   }
