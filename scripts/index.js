@@ -928,7 +928,7 @@ $(document).ready(function() {
   console.log("%c--- Danger Zone ---", "color: red; font-size: 25px");
   console.log("%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a feature or \"hack\", it is likely a scam.", "font-size: 16px;");
   console.log("%cIf you ARE a developer, feel free to check this project out here:", "font-size: 16px;");
-  console.log("%chttps://github.com/emilyxietty/", "font-size: 16px;");
+  console.log("%chttps://github.com/Srixx24/", "font-size: 16px;");
 
   // $('#progress-line').css("display", "flex");
   const configUrl = chrome.runtime.getURL('resources/config.json');
