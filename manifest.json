@@ -7,7 +7,7 @@
   "permissions": ["storage", "bookmarks", "geolocation"],
   "icons": {
     "pug": "puggy pixel.jpg",
-    "kitty": "kitty.jpg"
+    "kitty": "kitty.png"
   },
   "chrome_url_overrides": {
     "newtab": "index.html"
