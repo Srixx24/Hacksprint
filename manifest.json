@@ -7,8 +7,5 @@
   "permissions": ["storage", "bookmarks", "geolocation"],
   "chrome_url_overrides": {
     "newtab": "index.html"
-  },
-  "content_security_policy": {
-    "extension_pages": "script-src 'self' https://ajax.googleapis.com https://cdn.jsdelivr.net 'unsafe-eval'; object-src 'self'"
   }
 }
