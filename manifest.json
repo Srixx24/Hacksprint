@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Reality Check",
+  "version": "1.0.",
+  "short_name": "Reality",
+  "description": "Hacksprint Reality project",
+  "permissions": ["storage", "bookmarks", "geolocation"],
+  "icons": {
+    "48": "boop",
+    "128": "boop"
+  },
+  "action": {
+   "default_title": "boop",
+   "default_popup": "boop"
+ },
+  "chrome_url_overrides": {
+    "newtab": "boop"
+  }
+}
