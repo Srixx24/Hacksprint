@@ -1133,9 +1133,6 @@ document.getElementById("infoSwitch").parentElement.addEventListener('click', fu
 document.getElementById("info").addEventListener("click", function() {
   updateInfoMode(); // Update info mode
 });
-document.getElementById("favSwitch").parentElement.addEventListener('click', function() {
-  updateFav(); // Update favorite settings
-});
 document.getElementById("todoSwitch").parentElement.addEventListener('click', function() {
   updateTodo(); // Update todo settings
 });
