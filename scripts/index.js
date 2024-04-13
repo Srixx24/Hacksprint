@@ -861,11 +861,8 @@ function createBackgroundMenuSwitch(name, key, bkMenu, index, backList) {
     index += 1;
     loadSource(backList);
   });
+  loadBackgroundMenuSwitches();
 }
-
-// Call the function to create and load the background menu switches
-loadBackgroundMenuSwitches();
-
 
 // Function: Load language strings into the UI
 function loadLanguageStrings(langJson) {
