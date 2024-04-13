@@ -1,4 +1,8 @@
 {
+  "default": {
+    "image": "Background images/bg1.jpg",
+    "quote": "{{getRandomQuote(quotes)}}"
+  },
  "name": "backgrounds",
   "list": [
     {
