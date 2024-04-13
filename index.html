@@ -19,18 +19,29 @@
   <link href="https://openweathermap.org/weather-conditions#Weather-Condition-Codes-2" rel="stylesheet">
 
   <!-- External JavaScript -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
 
   <script type="text/javascript" src="scripts/index.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
   <script type="text/javascript" src="scripts/weather.js"></script>
-  <script type="text/javascript" src="scripts/hidetoggle.js"></script>
+
 
 </head>
 
 <body>
+  <div ID="menu">
+    <div class="menuText" style="color: rgba(255,255,255,0.95) !important; font-size: 0.9em !important; color: white !important;font-weight: 600">credit goes to</div>
+
+      <div class="sliderWrapper">
+
+      <div ID="buttonsmore">
+
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <a role="button" class="btn btn-outline-light"href="https://github.com/Srixx24/" target="_blank">Jackie github</a>
+       <br>
+        <a role="button" class="btn btn-outline-light"href="https://github.com/ThatsVie/" target="_blank">Vie github</a>
+       </div>
+      </div>
+    </div>
 
   <!-- Background -->
   <div class="backloader" id="backloader" style="display: none;">
@@ -38,26 +49,12 @@
     <div id="progress-line"></div>
     <!-- Background image -->
     <img src="" id="backdropimg" class="backdrop" draggable="false" width="100%">
-    <!-- Background video -->
-    <video id="backdropvid" class="backdrop" width="100%" loop autoplay style="display: none;">
-      <source src="" type="video/mp4">
-    </video>
   </div>
 
   <!-- Menu -->
   <div id="menu">
   </div>
 
-    <!-- Time switch -->
-    <div id="infoMenuItem">
-      <div class="sliderWrapper2">
-        <label class="switch">
-          <input type="checkbox" id="timeSwitch" checked>
-          <span class="slider round"></span>
-        </label>
-        <span class="menuText">⏰ time</span>
-      </div>
-    </div>
 
     <!-- Search bar switch -->
     <div id="infoMenuItem">
@@ -123,57 +120,30 @@
     <div id="searchChange">⯈</div>
   </div>
 
-  <!-- RightMenus side panel -->
-  <div id="rightMenus">
-    <!-- Widgets -->
-    <div id="menuText" class="top-space">
-      <div class="widgetcont">
-        <div class="row">
-          <div class="column">
-            <div class="weather-box" id="content1">
-
-              <!-- Weather information -->
-              <ol class="weather-icon"><img src="icons/load1.gif" width="50"/></ol>
+  <!-- RightMenu side panel -->
+<div id="rightMenu">
+  <!-- Widgets -->
+  <div id="menuText" class="top-space">
+    <div class="widgetcont">
+      <div class="row">
+        <div class="column">
+          <div class="weather-box" id="content1">
+            <!-- Weather information -->
+            <div id="panel" style="position: fixed; top: 0; right: 0; background-color: transparent; z-index: 9999;">
+              <ol class="weather-icon"><img src="icons weather/space.gif" width="50"/></ol>
               <div id="weather" style="color: rgba(255,255,255,0.9)"></div>
               <div id="temperature" style="padding-left: 0.5em; color: rgba(255,255,255,0.9); font-size: 1.8rem; font-weight: 700;"></div>
               <ol id="description" style="color: rgba(255,255,255,0.9)"></ol>
               <ol id="location" style="color: rgba(255,255,255,0.9)"></ol>
-              <div id="location"></div>
               <ol id="ico" style="color: rgba(255,255,255,0.0)";></ol>
             </div>
           </div>
         </div>
-        <div class="break"></div>
       </div>
-
-          <!-- Right panel preferences -->
-          <div id="otherright" class="hidden">
-            <div id="content" class="content">
-              <div class="btn-toolbar text-right" role="toolbar" aria-label="Toolbar with button groups">
-              </div>
-            </div>
-          </div>
-	 
-          <!-- Toggle preferences -->
-          <div class="break">
-            <span>show preferences</span>
-            <label class="switch">
-              <input type='checkbox' id='hideright'>
-              <span class="slider round"></span>
-            </label>
-          </div>
-          <!-- Right panel settings -->
-          <div id="rightpref" class="hidden">
-            <span>Weather</span>
-            <label class="switch">
-              <input type='checkbox' class= 'weatherswitch'id='hideshow1' checked>
-              <span class="slider round"></span>
-            </label>
-          </div>
-        </div>
-      </div>
+      <div class="break"></div>
     </div>
   </div>
+</div>
 
 </body>
 

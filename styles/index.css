@@ -63,7 +63,7 @@ button:focus {
   transition: 0s; /* Set transition duration to 0s */
   z-index: 1; /* Set z-index to 1 */
 
-/* Background image and video transitions */
+/* Background image */
 #backdropimg, #backdropvid {
   transition: 0.5s; /* Set transition duration to 0.5s */
   opacity: 0; /* Set initial opacity to 0 */
@@ -166,32 +166,6 @@ button:focus {
   left: 7%; /* Left position */
   z-index: 5; /* Stack order */
   opacity: 0; /* Opacity */
-}
-
-.todoWrapper {
-  position: absolute; /* Positioning */
-  background: transparent; /* Background color */
-  top: 10%; /* Top position */
-  left: 5%; /* Left position */
-  width: calc(250px + 10vw); /* Width */
-  z-index: 5; /* Stack order */
-  opacity: 0; /* Opacity */
-}
-
-/* Setting todolist hover to be visible */
-.todoHover {
-  background-color: rgba(0, 0, 0, 0); /* Transparent background */
-  border-radius: 10px; /* Border radius */
-}
-
-.todoHover:hover {
-  background-color: rgba(0, 0, 0, 0.4) !important; /* Semi-transparent background on hover */
-  transition: 0.2s; /* Smooth transition */
-}
-
-.todoHover:hover .todoInput::placeholder {
-  color: rgba(255, 255, 255, 0.55); /* Placeholder text color on hover */
-  transition: 0.2s; /* Smooth transition */
 }
 
 /* Right Menus */
@@ -724,8 +698,6 @@ input:checked + .slider:before {
 
 /* Styling for range slider */
 .rangeSlider {
-  /* Webkit appearance */
-  -webkit-appearance: none;
   /* Width */
   width: 100%;
   /* Height */
@@ -913,137 +885,6 @@ ul li.checked {
   clear: both;
 }
 
-/* Style the input */
-.todoInput {
-  /* Remove borders and border radius */
-  border: none;
-  border-radius: 0;
-  /* Padding */
-  padding: 10px;
-  padding-left: 17px;
-  /* Full width */
-  width: 100%;
-  /* Float to the left */
-  float: left;
-  /* Font size */
-  font-size: 16px;
-  /* Font family */
-  font-family: "open sans";
-  /* Text color */
-  color: rgba(255, 255, 255, 0.7);
-  /* Transparent background */
-  background-color: transparent;
-  /* Reset border colors */
-  border-top: 1px rgba(255, 255, 255, 0.5);
-  border-right: transparent;
-  border-left: transparent;
-  border-bottom: transparent;
-}
-
-/* Style the input placeholder */
-.todoInput::placeholder {
-  /* Transparent placeholder text */
-  color: rgba(255, 255, 255, 0);
-}
-
-/* Reset options */
-/* Customize the reset container */
-.reset-container {
-  /* Block display */
-  display: block;
-  /* Relative positioning */
-  position: relative;
-  /* Left padding */
-  padding-left: 35px;
-  /* Bottom margin */
-  margin-bottom: 12px;
-  /* Cursor */
-  cursor: pointer;
-  /* Font size */
-  font-size: 14px;
-  /* Disable user selection */
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* Hide the browser's default checkbox */
-.reset-container input {
-  /* Absolute positioning */
-  position: absolute;
-  /* Transparent */
-  opacity: 0;
-  /* Cursor */
-  cursor: pointer;
-  /* Zero height and width */
-  height: 0;
-  width: 0;
-}
-
-/* Create a custom checkbox */
-.reset-checkmark {
-  /* Absolute positioning */
-  position: absolute;
-  /* Top position */
-  top: 1px;
-  /* Left position */
-  left: 10px;
-  /* Height and width */
-  height: 18px;
-  width: 18px;
-  /* Border radius */
-  border-radius: 3px;
-  /* Background color */
-  background-color: #eee;
-  /* Transition effect */
-  transition: 0.25s;
-}
-
-/* Change background color on hover */
-.reset-container:hover input~.reset-checkmark {
-  /* Grey background color on hover */
-  background-color: #ccc;
-}
-
-/* Change background color when checked */
-.reset-container input:checked~.reset-checkmark {
-  /* Blue background color when checked */
-  background-color: #2196F3;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.reset-checkmark:after {
-  /* Empty content */
-  content: "";
-  /* Absolute positioning */
-  position: absolute;
-  /* Hidden by default */
-  display: none;
-}
-
-/* Show the checkmark when checked */
-.reset-container input:checked~.reset-checkmark:after {
-  /* Display as block */
-  display: block;
-}
-
-/* Style the checkmark/indicator */
-.reset-container .reset-checkmark:after {
-  /* Positioning */
-  left: 5px;
-  top: 1px;
-  /* Width and height */
-  width: 5px;
-  height: 10px;
-  /* Border style */
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  /* Rotation */
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
 /* Style the weather box */
 .weather-box {
   /* Rounded corners */
@@ -1058,4 +899,4 @@ ul li.checked {
   background-color: #151f2e;
   /* Overflow behavior */
   overflow: hidden;
-}
+}}
