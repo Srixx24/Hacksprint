@@ -5,7 +5,8 @@
   position: fixed;
   bottom: calc(25vh + 20px); /* 1/4 up from the bottom */
   right: 20px;
-  font-size: 1em;
+  width: calc(100% - 40px); /* Add a width to constrain the text */
+  font-size: 2em;
   font-weight: 700;
   margin: 0;
   color: white;
@@ -13,12 +14,12 @@
 }
 
 #quote-text {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+  position: relative;
+  bottom: unset;
+  right: unset;
   font-size: 1em;
   font-weight: 700;
-  margin: 0.4em;
+  margin: 0 auto;
 	color:rgb(253, 253, 252);
 	text-align: center;
 }
