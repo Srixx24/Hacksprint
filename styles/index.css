@@ -4,6 +4,7 @@
 body {
   overflow: hidden; /* Prevent scrolling */
   background-color: rgba(0, 0, 0, 0); /* Set background color */
+  margin: auto;
   font-family: "Open Sans"; /* Set font family */
   user-select: none; /* Disable text selection */
 }
