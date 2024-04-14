@@ -1,3 +1,13 @@
+function showMenu() {
+    var sliderWrapper = document.getElementById("sliderWrapper");
+    sliderWrapper.style.display = "block";
+  }
+  
+  function hideMenu() {
+    var sliderWrapper = document.getElementById("sliderWrapper");
+    sliderWrapper.style.display = "none";
+  }
+
 jQuery(document).ready(function(){
     jQuery('#hideshow').on('click', function(event) {
         jQuery('#content').toggle('show');
