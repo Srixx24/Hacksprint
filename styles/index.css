@@ -22,9 +22,71 @@ h2 {
   margin: 0; /* Remove margin */
 }
 
+/* CSS for progress line */
+#progress-line {
+  background-color: rgba(255, 255, 255, 0); /* Set background color with transparency */
+  display: -webkit-flex; /* Enable flexbox layout (for older WebKit browsers) */
+  display: flex; /* Enable flexbox layout */
+}
 
-  
+#progress-line:before {
+  background-color: rgba(255, 255, 255, 0.6); /* Set background color with transparency */
+  content: ''; /* Add empty content */
+  -webkit-animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite; /* Apply animation for WebKit browsers */
+  animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite; /* Apply animation */
+}
 
+/* Animation keyframes for progress line */
+@keyframes running-progress {
+  0% {
+    left: -100%; /* Start position */
+  }
+  100% {
+    left: 100%; /* End position */
+  }
+}
+
+/* Keyframes for WebKit-specific progress line animation */
+@-webkit-keyframes running-progress {
+  /* At 0% progress, the line starts at the left edge of its container */
+  0% {
+    margin-left: 0px;
+    margin-right: 100%;
+  }
+
+  /* At 50% progress, the line is partially visible */
+  50% {
+    margin-left: 25%;
+    margin-right: 0%;
+  }
+
+  /* At 100% progress, the line reaches the right edge of its container */
+  100% {
+    margin-left: 100%;
+    margin-right: 0;
+  }
+}
+
+/* Keyframes for running-progress animation */
+@keyframes running-progress {
+  /* At 0% progress, the line starts at the left edge of its container */
+  0% {
+    margin-left: 0px;
+    margin-right: 100%;
+  }
+
+  /* At 50% progress, the line is partially visible */
+  50% {
+    margin-left: 25%;
+    margin-right: 0%;
+  }
+
+  /* At 100% progress, the line reaches the right edge of its container */
+  100% {
+    margin-left: 100%;
+    margin-right: 0;
+  }
+}
 
 /* Scrollbar styles */
 ::-webkit-scrollbar {
