@@ -101,6 +101,11 @@ button:focus {
   background-color: rgba(0, 0, 0, 0) /* Set background color */
 
 }
+.time-container {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
 
 /* Time widget */
 .time {
