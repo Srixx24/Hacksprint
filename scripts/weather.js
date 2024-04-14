@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", function() {
         temperature.innerHTML = tempFahrenheit.toFixed(2) + "° F";
         location.innerHTML = data.name;
         description.innerHTML = data.weather[0].main;
-        var test = data.weather[0].icon;
-        var fileName = `<img src="icon/${test}.gif" width = "50">`;
+        var weatherType = data.weather[0].icon;
+        var fileName = `<img src="icons weather/${weatherType}.gif" width = "50">`;
         locationIcon.innerHTML = fileName;
       } catch (error) {
         location.innerHTML = "Unable to retrieve your location";
