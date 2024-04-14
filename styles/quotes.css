@@ -11,7 +11,7 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  font-size: 1.8em;
+  font-size: 2.5em;
   font-weight: 700;
   margin: 0.4em;
 	color:rgb(253, 253, 252);
@@ -38,10 +38,10 @@
 
 }
 #h1 {
-  font-size: 1.8em;
+  font-size: 3em;
   font-weight: 700;
   margin: 0.4em;
-	color:white;
+	color:rgba(247, 247, 247, 0.959);
 	text-align: center;
 }
 #h2 {
