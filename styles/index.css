@@ -186,7 +186,7 @@ button:focus {
 .search {
   padding: 5px; /* Padding */
   border-radius: 7px; /* Border radius */
-  color: rgba(255, 255, 255, 0.822); /* Text color */
+  color: black; /* Text color */
   background-color: rgba(255, 255, 255, 0.932) !important; /* Background color */
   font-size: 20px; /* Font size */
   font-family: "HelveticaNeue-Light", "open sans Light", "open sans", Helvetica, Arial, "Lucida Grande", sans-serif; /* Font family */
@@ -197,6 +197,12 @@ button:focus {
   top: 50%; /* Top position */
   left: 50%; /* Left position */
 }
+
+.search::placeholder {
+  color: #777; /* Or any color that shows up against the white */
+  opacity: 1; /* Older browsers need this to show the color */
+}
+
 
 /* Wrappers for widgets */
 .timeWrapper {
