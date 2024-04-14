@@ -430,8 +430,8 @@ button:focus {
   margin-left: 50px;
   padding: 5px; /* Padding */
   border-radius: 7px; /* Border radius */
-  color: rgba(255, 255, 255, 0.822); /* Text color */
-  background-color: rgba(255, 255, 255, 0.932) !important; /* Background color */
+  color: rgba(94, 91, 91, 0.336); /* Text color */
+  background-color: rgba(255, 255, 255, 0.514) !important; /* Background color */
   font-size: 20px; /* Font size */
   font-family: "HelveticaNeue-Light", "open sans Light", "open sans", Helvetica, Arial, "Lucida Grande", sans-serif; /* Font family */
   font-weight: 100; /* Font weight */
@@ -445,8 +445,8 @@ button:focus {
 #infomenu {
   padding: 5px; /* Padding */
   border-radius: 7px; /* Border radius */
-  color: rgba(255, 255, 255, 0.822); /* Text color */
-  background-color: rgba(255, 255, 255, 0.932) !important; /* Background color */
+  color: rgba(66, 59, 59, 0.822); /* Text color */
+  background-color: rgba(255, 255, 255, 0.527) !important; /* Background color */
   font-size: 20px; /* Font size */
   font-family: "HelveticaNeue-Light", "open sans Light", "open sans", Helvetica, Arial, "Lucida Grande", sans-serif; /* Font family */
   font-weight: 100; /* Font weight */
@@ -467,7 +467,8 @@ button:focus {
 /* Button wrapper styles */
 .buttonWrapper {
   /* Bottom margin */
-  margin-bottom: 1px !important;
+  top: 30%;
+  left: 15%;
 }
 
 /* Button icons */
