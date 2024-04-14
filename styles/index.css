@@ -119,7 +119,7 @@ button:focus {
   left: 0; /* Align to the left */
   min-height: 100%; /* Set minimum height to 100% */
   height: 100%; /* Set height to 100% */
-  background-color: #151f2e; /* Set background color */
+  background-color: #3f0357d7; /* Set background color */
 
   filter: brightness(1) saturation(0.9) blur(0px) contrast(100%); /* Set filter properties */
   transition: 0s; /* Set transition duration to 0s */
