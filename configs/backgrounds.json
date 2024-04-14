@@ -1,57 +1,21 @@
 {
   "default": {
     "image": "Background images/bg1.jpg",
-    "quote": "{{getRandomQuote(quotes)}}"
+    "quote": ""
   },
- "name": "backgrounds",
+  "name": "backgrounds",
   "list": [
-    {
-      "image": "Background images/bg1.jpg",
-      "quote": "{{getRandomQuote(quotes)}}"
-    },
-    {
-      "image": "Background images/bg2.jpg",
-      "quote": "{{getRandomQuote(quotes)}}"
-    },
-    {
-      "image": "Background images/bg3.jpg",
-      "quote": "{{getRandomQuote(quotes)}}"
-    },
-    {
-      "image": "Background images/bg4.jpg",
-      "quote": "{{getRandomQuote(quotes)}}"
-    },
-    {
-      "image": "Background images/bg5.jpg",
-      "quote": "{{getRandomQuote(quotes)}}"
-    },
-    {
-      "image": "Background images/bg6.jpg",
-      "quote": "{{getRandomQuote(quotes)}}"
-    },
-    {
-      "image": "Background images/bg7.jpg",
-      "quote": "{{getRandomQuote(quotes)}}"
-    },
-    {
-      "image": "Background images/bg8.jpg",
-      "quote": "{{getRandomQuote(quotes)}}"
-    },
-    {
-      "image": "Background images/bg9.jpg",
-      "quote": "{{getRandomQuote(quotes)}}"
-    },
-    {
-      "image": "Background images/bg10.jpg",
-      "quote": "{{getRandomQuote(quotes)}}"
-    },
-    {
-      "image": "Background images/bg11.jpg",
-      "quote": "{{getRandomQuote(quotes)}}"
-    },
-    {
-      "image": "Background images/bg12.jpg",
-      "quote": "{{getRandomQuote(quotes)}}"
-    }
+    {"image": "Background images/bg1.jpg"},
+    {"image": "Background images/bg2.jpg"},
+    {"image": "Background images/bg3.jpg"},
+    {"image": "Background images/bg4.jpg"},
+    {"image": "Background images/bg5.jpg"},
+    {"image": "Background images/bg6.jpg"},
+    {"image": "Background images/bg7.jpg"},
+    {"image": "Background images/bg8.jpg"},
+    {"image": "Background images/bg9.jpg"},
+    {"image": "Background images/bg10.jpg"},
+    {"image": "Background images/bg11.jpg"},
+    {"image": "Background images/bg12.jpg"}
   ]
 }
