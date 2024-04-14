@@ -6,12 +6,18 @@ body {
   margin: 0.5;
   padding: 1.5em;
   color: black;
-  background: #88b0cd;
+  background: #151f2e;
   font-family: "Open Sans";
   display: flex;
   flex-direction: column;
   user-select: none;
 }
+#quote-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
 .btn-outline-light{
   border-color: #5566AA;
 }
@@ -61,11 +67,6 @@ body {
 	text-align:left;
 	color:white;
 }
-#container {
-	padding-left:2em;
-	padding-right: 2em; 
-}
-
 
 .label {
   display: inline-flex;
@@ -118,25 +119,4 @@ img {
 
 .toggle-state {
   display: none;
-}
-
-.indicator {
-  height: 100%;
-  width: 200%;
-  background: white;
-  border-radius: 13px;
-  transform: translate3d(-75%, 0, 0);
-  transition: transform 0.35s cubic-bezier(0.85, 0.05, 0.18, 1.35);
-}
-
-.toggle-state:checked ~ .active-bg {
-   transform: translate3d(-50%, 0, 0);
-}
-
-.toggle-state:checked ~ .toggle-inner .indicator {
-   transform: translate3d(25%, 0, 0);
-}
-
-.btn-outline-light{
-  font-size:10px;
 }
