@@ -102,6 +102,13 @@ button:focus {
 
 }
 
+}
+.time-container {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
 /* Time widget */
 .time {
   color: rgba(255, 255, 255, 0.85); /* Text color */
@@ -112,10 +119,8 @@ button:focus {
   margin-bottom: 12px; /* Bottom margin */
   margin-top: 30px; /* Top margin */
   cursor: pointer; /* Cursor style */
-  position: absolute;
-  top: 45%; /* Adjust top position */
-  left: 50%;
-  transform: translate(-50%, -50%);
+  order: 1;
+  font-size: 25vw;
 }
 
 /* AM/PM text element */
@@ -123,12 +128,14 @@ button:focus {
   color: rgba(255, 255, 255, 0.5); /* Text color */
   font-family: "open sans"; /* Font family */
   font-weight: 400; /* Font weight */
-  font-size: 5vw; /* Font size */
+  font-size: 2vw; /* Font size */
   position: absolute; /* Positioning */
-  top: 55%; /* Adjust this to align under the time */
-  left: 52%; /* Adjust this value to move it right of the time */
-  transform: translate(-50%, -50%);
+  top: calc(9vw + 5px); /* Top position */
+  right: -20%; /* Right position */
+  order: 2;
+  font-size: 2vw;
 }
+
 
 /* Time widget element */
 .info {
