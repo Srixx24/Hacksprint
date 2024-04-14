@@ -102,6 +102,13 @@ button:focus {
 
 }
 
+.time-container {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  position: absolute;
+}
+
 /* Time widget */
 .time {
   color: rgba(255, 255, 255, 0.85); /* Text color */
@@ -112,10 +119,9 @@ button:focus {
   margin-bottom: 12px; /* Bottom margin */
   margin-top: 30px; /* Top margin */
   cursor: pointer; /* Cursor style */
-  position: absolute;
-  top: 45%; /* Adjust top position */
-  left: 50%;
-  transform: translate(-50%, -50%);
+  order: 1;
+  font-size: 25vw;
+  display: inline-block;
 }
 
 /* AM/PM text element */
@@ -123,12 +129,11 @@ button:focus {
   color: rgba(255, 255, 255, 0.5); /* Text color */
   font-family: "open sans"; /* Font family */
   font-weight: 400; /* Font weight */
-  font-size: 5vw; /* Font size */
-  position: absolute; /* Positioning */
-  top: 55%; /* Adjust this to align under the time */
-  left: 52%; /* Adjust this value to move it right of the time */
-  transform: translate(-50%, -50%);
+  font-size: 2vw; /* Font size */
+  display: inline-block;
+  vertical-align: middle; /* Aligns the text vertically */
 }
+
 
 /* Time widget element */
 .info {
@@ -181,16 +186,20 @@ button:focus {
 }
 
  /* search bar logic*/
- .searchDiv {
-  padding: 2px;
-  cursor: move;
+
+.searchDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 50%;
   left: 50%;
-  color: rgb(71, 148, 148);
   transform: translate(-50%, -50%);
-
- }
+  padding: 2px;
+  cursor: move;
+  color: rgb(71, 148, 148);
+}
 
  /* search bar text*/
  .searchText {
@@ -199,9 +208,24 @@ button:focus {
   color: darkturquoise;
   background-color: transparent;
   border: none;
-  width: 140%;
+  width: 40vw;
 
 }
+
+
+#searchInput {
+  padding: 10px;
+  border-radius: 9px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.616);
+  font-size: 20px;
+  font-family: "HelveticaNeue-Light", "Open Sans Light", "Open Sans", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 100;
+  width: 40vw; /* You can adjust this value to fit your design */
+  border: 1px solid rgba(79, 3, 122, 0.815);
+  margin-bottom: 1rem; /* This will push the searchText down */
+}
+
 
 /* Right Menus */
 #rightMenus {
