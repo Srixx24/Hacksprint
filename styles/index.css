@@ -101,11 +101,6 @@ button:focus {
   background-color: rgba(0, 0, 0, 0) /* Set background color */
 
 }
-.time-container {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-}
 
 /* Time widget */
 .time {
@@ -117,8 +112,6 @@ button:focus {
   margin-bottom: 12px; /* Bottom margin */
   margin-top: 30px; /* Top margin */
   cursor: pointer; /* Cursor style */
-  order: 1;
-  font-size: 25vw;
 }
 
 /* AM/PM text element */
@@ -130,8 +123,6 @@ button:focus {
   position: absolute; /* Positioning */
   top: calc(9vw + 5px); /* Top position */
   right: -20%; /* Right position */
-  order: 2;
-  font-size: 2vw;
 }
 
 /* Time widget element */
@@ -177,8 +168,8 @@ button:focus {
 
 .searchWrapper {
   position: absolute; /* Positioning */
-  top: 50%; /* Top position */
-  left: 50%; /* Left position */
+  top: 80%; /* Top position */
+  left: 10%; /* Left position */
   transform: translate(-50%, -50%);
   z-index: 5; /* Stack order */
 }
@@ -210,7 +201,7 @@ button:focus {
 #rightMenus {
   padding-top: 10px; /* Top padding */
   background-color: rgba(0, 0, 0, 0); /* Transparent background */
-  z-index: 10; /* Stack order */
+  z-index: 7; /* Stack order */
   position: absolute; /* Positioning */
   top: 0; /* Top position */
   right: 0; /* Right position */
@@ -226,8 +217,8 @@ button:focus {
 /* Styles for rightMenus on hover */
 #rightMenus:hover {
   background-color: rgba(0, 0, 0, 0); /* Transparent background */
-  width: 300px; /* Expanded width on hover */
-  overflow: visible !important; /* Show scrollbar on hover */
+  width: 350px; /* Expanded width on hover */
+  overflow: auto !important; /* Show scrollbar on hover */
   scrollbar-color: rgba(255, 255, 255, 0.1) rgba(0, 0, 0, 0); /* Scrollbar color */
   scrollbar-width: thin; /* Scrollbar width */
 }
@@ -311,7 +302,7 @@ button:focus {
 #menu:hover,
 #menu.delay {
   background-color: #151f2e; /* Background color */
-  width: 300px; /* Expanded width */
+  width: 350px; /* Expanded width */
   overflow: auto !important; /* Enable overflow scrolling */
   /* Firefox scrollbar */
   scrollbar-color: rgba(255, 255, 255, 0.1) rgba(0, 0, 0, 0); /* Scrollbar color */
