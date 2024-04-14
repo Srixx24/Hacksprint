@@ -464,7 +464,7 @@ button:focus {
   background-color: rgba(218, 103, 179, 0.425);
 }
 
-/* Button wrapper styles */
+/* Button wrapper styles for info */
 .buttonWrapper {
   /* Bottom margin */
   top: 30%;
