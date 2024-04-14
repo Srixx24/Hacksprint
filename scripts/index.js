@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Fetch weather data from API
 function fetchWeather() {
-    const weatherApiUrl = "https://api.openweathermap.org/data/2.5/weather?q=Tulsa,OK&appid=d311ada8928d1db50516795d4b5b07af&units=metric";
+    const weatherApiUrl = "https://api.openweathermap.org/data/2.5/weather?q=Tulsa,OK,US&appid=f146799a557e8ab658304c1b30cc3cfd&units=metric";
     fetch(weatherApiUrl)
         .then(response => response.json())
         .then(data => {
