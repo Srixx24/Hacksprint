@@ -209,12 +209,17 @@ button:focus {
 
 .searchWrapper {
   position: absolute; /* Positioning */
-  top: 50%; /* Top position */
-  left: 50%; /* Left position */
+  top: 80%; /* Top position */
+  left: 10%; /* Left position */
   transform: translate(-50%, -50%);
   z-index: 5; /* Stack order */
-  opacity: 0; /* Opacity */
 }
+
+ /* movable part of search widget */
+ .searchDiv {
+   padding: 5px;
+   cursor: move;
+ }
 
 /* Right Menus */
 #rightMenus {
