@@ -57,6 +57,11 @@ body {
   }
 }
 
+#container {
+	padding-left:2em;
+	padding-right: 2em; 
+}
+
 /* CSS for h2 elements */
 h2 {
   font-weight: 700; /* Set font weight to bold */
@@ -188,6 +193,8 @@ button:focus {
   color: darkturquoise;
   background-color: transparent;
   border: none;
+  width: 140%;
+
 }
 
 /* Right Menus */
