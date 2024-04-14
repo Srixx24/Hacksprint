@@ -20,9 +20,25 @@ function getRandomQuote() {
 
     var quoteIndex = Math.floor(Math.random() * quotes.length);
     var randomQuote = quotes[quoteIndex].quote;
-    document.getElementById("quote-text").textContent = randomQuote;
+    var quoteTextElement = document.getElementById("quote-text");
+
+    // Log the element to see if it was successfully retrieved
+    console.log("Quote text element found:", quoteTextElement);
+
+    // Check if the element exists before trying to set its text content
+    if (quoteTextElement) {
+        quoteTextElement.textContent = randomQuote;
+    } else {
+        // Log an error if the element was not found
+        console.error("Failed to find the 'quote-text' element.");
+    }
 }
-getRandomQuote();
+
+// Call getRandomQuote to initialize the quote on page load
+document.addEventListener("DOMContentLoaded", function() {
+    getRandomQuote();
+});
+
 
 // Function to load backgrounds from JSON configuration
 async function loadBackgrounds() {
