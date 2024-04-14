@@ -62,58 +62,6 @@ h2 {
   font-weight: 700; /* Set font weight to bold */
 }
 
-/* Animation keyframes for progress line */
-@keyframes running-progress {
-  0% {
-    left: -100%; /* Start position */
-  }
-  100% {
-    left: 100%; /* End position */
-  }
-}
-
-/* Keyframes for WebKit-specific progress line animation */
-@-webkit-keyframes running-progress {
-  /* At 0% progress, the line starts at the left edge of its container */
-  0% {
-    margin-left: 0px;
-    margin-right: 100%;
-  }
-
-  /* At 50% progress, the line is partially visible */
-  50% {
-    margin-left: 25%;
-    margin-right: 0%;
-  }
-
-  /* At 100% progress, the line reaches the right edge of its container */
-  100% {
-    margin-left: 100%;
-    margin-right: 0;
-  }
-}
-
-/* Keyframes for running-progress animation */
-@keyframes running-progress {
-  /* At 0% progress, the line starts at the left edge of its container */
-  0% {
-    margin-left: 0px;
-    margin-right: 100%;
-  }
-
-  /* At 50% progress, the line is partially visible */
-  50% {
-    margin-left: 25%;
-    margin-right: 0%;
-  }
-
-  /* At 100% progress, the line reaches the right edge of its container */
-  100% {
-    margin-left: 100%;
-    margin-right: 0;
-  }
-}
-
 /* Scrollbar styles */
 ::-webkit-scrollbar {
   width: 6px; /* Set the width of the scrollbar */
@@ -519,20 +467,4 @@ button:focus {
 .buttIcons {
   /* Vertical transformation */
   transform: translate(0px, 3px);
-}
-
-/* Style the weather box */
-.weather-box {
-  /* Rounded corners */
-  border-radius: 15px;
-  /* Margin */
-  margin-left: 10px;
-  margin-right: 10px;
-  /* Padding */
-  padding-bottom: 0px;
-  padding-top: 10px;
-  /* Background color */
-  background-color: #4c6488;
-  /* Overflow behavior */
-  overflow: hidden;
 }
