@@ -221,11 +221,24 @@ button:focus {
   z-index: 5; /* Stack order */
 }
 
- /* movable part of search widget */
+ /* search bar logic*/
  .searchDiv {
-   padding: 5px;
-   cursor: move;
+  padding: 5px;
+  cursor: move;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
  }
+
+ /* search bar text*/
+ .searchText {
+  font-size: 3vw;
+  text-align: center;
+  color: darkturquoise;
+
+}
 
 /* Right Menus */
 #rightMenus {
