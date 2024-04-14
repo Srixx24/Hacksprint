@@ -3,10 +3,11 @@
 /* CSS to prevent scrolling */
 body {
   overflow: hidden; /* Prevent scrolling */
-  background-color: #999; /* Set background color */
+  background-color: #99dd7a; /* Set background color */
   margin: 0px; /* Remove default margin */
   font-family: "Open Sans"; /* Set font family */
   user-select: none; /* Disable text selection */
+  height: 100vh; /* Set body height to fill the viewport */
 }
 
 /* CSS for h2 elements */
@@ -119,14 +120,12 @@ button:focus {
   left: 0; /* Align to the left */
   min-height: 100%; /* Set minimum height to 100% */
   height: 100%; /* Set height to 100% */
-  background-color: #3f0357d7; /* Set background color */
+  background-color: rgba(0, 0, 0, 0) /* Set background color */
 
-  filter: brightness(1) saturation(0.9) blur(0px) contrast(100%); /* Set filter properties */
-  transition: 0s; /* Set transition duration to 0s */
-  z-index: 1; /* Set z-index to 1 */
+}
 
 /* Background image */
-#backdropimg, #backdropvid {
+#backdropimg {
   transition: 0.5s; /* Set transition duration to 0.5s */
   opacity: 0; /* Set initial opacity to 0 */
   background-size: cover;
@@ -476,4 +475,4 @@ button:focus {
   background-color: #151f2e;
   /* Overflow behavior */
   overflow: hidden;
-}}
+}
