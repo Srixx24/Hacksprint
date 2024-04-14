@@ -6,7 +6,6 @@ body {
   background-color: rgba(0, 0, 0, 0); /* Set background color */
   font-family: "Open Sans"; /* Set font family */
   user-select: none; /* Disable text selection */
-  height: 40vh; /* Set body height to fill the viewport */
 }
 
 /* CSS for h2 elements */
