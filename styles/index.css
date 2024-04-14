@@ -62,28 +62,6 @@ h2 {
   font-weight: 700; /* Set font weight to bold */
 }
 
-/* CSS for loading bar */
-#progress-line,
-#progress-line:before {
-  height: 1px; /* Set height */
-  width: 100%; /* Set width to fill the container */
-  margin: 0; /* Remove margin */
-}
-
-/* CSS for progress line */
-#progress-line {
-  background-color: rgba(255, 255, 255, 0.836); /* Set background color with transparency */
-  display: -webkit-flex; /* Enable flexbox layout (for older WebKit browsers) */
-  display: flex; /* Enable flexbox layout */
-}
-
-#progress-line:before {
-  background-color: rgba(255, 255, 255, 0.6); /* Set background color with transparency */
-  content: ''; /* Add empty content */
-  -webkit-animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite; /* Apply animation for WebKit browsers */
-  animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite; /* Apply animation */
-}
-
 /* Animation keyframes for progress line */
 @keyframes running-progress {
   0% {
