@@ -19,8 +19,10 @@ function getRandomQuote() {
     ];
 
     var quoteIndex = Math.floor(Math.random() * quotes.length);
-    return quotes[quoteIndex]['quote' + (quoteIndex + 1)];
+    var randomQuote = quotes[quoteIndex].quote;
+    document.getElementById("quote-text").textContent = randomQuote;
 }
+getRandomQuote();
 
 // Function to load backgrounds from JSON configuration
 async function loadBackgrounds() {
@@ -59,4 +61,3 @@ function setRandomBackground(backgrounds) {
 loadBackgrounds().then(backgrounds => {
   setRandomBackground(backgrounds);
 });
-getRandomQuote();

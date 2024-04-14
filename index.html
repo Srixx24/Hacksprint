@@ -55,20 +55,25 @@
     <div class="backloader" ID="backloader" style="filter: brightness(1) saturate(1.3) contrast(1)
     contrast(1);"></div>
     <img src="" ID="backdropimg" class="backdrop" draggable="false" width="100%" style="opacity: 100;">
+
+       <!-- Search bar widget -->
+   <div class="infoWrapper" id="infoWrapper">
+    <div class="info" id="info"></div>
+    <div class="searchWrapper" id="searchWrapper">
+      <div class="searchDiv" id="searchDiv"></div>
+      <form id=search action="https://www.google.com/search" method="get">
+        <input id="searchInput" class="search" data-placeholder=" Google Search" type="search" name="q" autocomplete="off" />
+        <input type="submit" style="display: none;" />
+      </form>
+      <div id="searchChange">⯈</div>
+    </div>
+  </div>
   </div>
 
   <div class="container">
     <div id="quote-container">
       <h1>Words of wisdom 🔮</h1>
-      <h1 class="quote-text" id="quote-text"></h1>
-    
-  <!-- Progress line -->
-    <div id="progress-line"></div>
-
-  <!-- Menu -->
-  <div id="menu">
-  </div>
-
+      <div class="quote-text" id="quote-text"></div>
 
     <!-- Search bar switch -->
     <div id="infoMenuItem">
@@ -87,30 +92,6 @@
 
     <!-- Blank space -->
     <div class="menuText" style="color: transparent !important; font-size: 34px;">.</div>
-    <div class="menuText" style="color: transparent !important; font-size: 34px;">.</div>
-    <div class="menuText" style="color: transparent !important; font-size: 34px;">.</div>
-    <div class="menuText" style="color: transparent !important; font-size: 34px;">.</div>
-  </div>
-
-  <!-- Time widget -->
-  <div class="timeWrapper" id="timeWrapper">
-    <h1 class="time" id="time"></h1>
-    <div class="pa" id="pa"></div>
-  </div>
-
-  <!-- Info widget -->
-  <div class="infoWrapper" id="infoWrapper">
-    <div class="info" id="info"></div>
-  </div>
-
-  <!-- Search bar widget -->
-  <div class="searchWrapper" id="searchWrapper">
-    <div class="searchDiv" id="searchDiv"></div>
-    <form id=search action="https://www.google.com/search" method="get">
-      <input id="searchInput" class="search" data-placeholder=" Google Search" type="search" name="q" autocomplete="off" />
-      <input type="submit" style="display: none;" />
-    </form>
-    <div id="searchChange">⯈</div>
   </div>
 
   <!-- RightMenu side panel -->
