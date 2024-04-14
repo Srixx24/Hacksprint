@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function() {
     loadBackgrounds().then(backgrounds => {
         setRandomBackground(backgrounds);
     });
-    fetchWeather();
     updateClock();
     setInterval(updateClock, 1000);
 
@@ -34,23 +33,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// Fetch weather data from API
-function fetchWeather() {
-    const weatherApiUrl = "https://api.openweathermap.org/data/2.5/weather?q=Tulsa,OK,US&appid=f146799a557e8ab658304c1b30cc3cfd&units=metric";
-    fetch(weatherApiUrl)
-        .then(response => response.json())
-        .then(data => {
-            const temperature = data.main.temp;
-            const condition = data.weather[0].main;
-            const location = data.name;
-            document.getElementById("temperature").textContent = `${temperature}°C`;
-            document.getElementById("description").textContent = condition;
-            document.getElementById("location").textContent = location;
-        })
-        .catch(error => {
-            console.error("Error fetching weather data:", error);
-        });
-}
 
 // Function to update the local time clock
 function updateClock() {
