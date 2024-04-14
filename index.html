@@ -32,6 +32,7 @@
   <script type="text/javascript" src="scripts/index.js"></script>
   <script type="text/javascript" src="scripts/weather.js"></script>
   <script type="text/javascript" src="scripts/quotes.js"></script>
+  <p id="quote-text"></p>
 </head>
 </head>
 
@@ -53,21 +54,15 @@
   </div>
 
   <!-- Background -->
-  <div class="backloader" id="backloader" style="display: none;">
-    <!-- Progress line -->
+  <div class="container">
+    <h1 class="quote-text" id="quote-text"></h1>
+  </div>
+  <div class="container">
+    <div id="backdropimg" class="background-image"></div>
+  </div>
+    
+  <!-- Progress line -->
     <div id="progress-line"></div>
-    <!-- Background image -->
-    <img src="" id="backdropimg" class="backdrop" draggable="false" width="100%">
-  </div>
-
-  <!-- Quote logic-->
-  <div>
-    <script>
-      const quote = getRandomQuote();
-      console.log(quote);
-    </script>
-    <p id="quote-text"></p>
-  </div>
 
   <!-- Menu -->
   <div id="menu">
