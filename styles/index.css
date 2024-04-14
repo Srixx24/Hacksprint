@@ -137,7 +137,7 @@ button:focus {
   font-family: "Open Sans"; /* Font family */
   user-select: none; /* Prevent text selection */
   font-weight: 600; /* Font weight */
-  font-size: 12vw; /* Font size */
+  font-size: 25vw; /* Font size */
   margin-bottom: 12px; /* Bottom margin */
   margin-top: 30px; /* Top margin */
   cursor: pointer; /* Cursor style */
@@ -188,8 +188,9 @@ button:focus {
 
 .searchWrapper {
   position: absolute; /* Positioning */
-  top: 85%; /* Top position */
-  left: 7%; /* Left position */
+  top: 50%; /* Top position */
+  left: 50%; /* Left position */
+  transform: translate(-50%, -50%);
   z-index: 5; /* Stack order */
   opacity: 0; /* Opacity */
 }

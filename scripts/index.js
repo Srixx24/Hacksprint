@@ -58,19 +58,35 @@ async function loadBackgrounds() {
     const data = await response.json();
     return data.list.map(bg => ({
         ...bg,
-        quote: getRandomQuote()  // Assuming getRandomQuote is available
+        quote: getRandomQuote()
     }));
 }
+
+const backgrounds = [
+    { image: "Background images/bg1.jpg", quote: "quote1" },
+    { image: "Background images/bg2.jpg", quote: "quote2" },
+    { image: "Background images/bg3.jpg", quote: "quote3" },
+    { image: "Background images/bg4.jpg", quote: "quote4" },
+    { image: "Background images/bg5.jpg", quote: "quote5" },
+    { image: "Background images/bg6.jpg", quote: "quote6" },
+    { image: "Background images/bg7.jpg", quote: "quote7" },
+    { image: "Background images/bg8.jpg", quote: "quote8" },
+    { image: "Background images/bg9.jpg", quote: "quote9" },
+    { image: "Background images/bg10.jpg", quote: "quote10" },
+    { image: "Background images/bg11.jpg", quote: "quote11" },
+    { image: "Background images/bg12.jpg", quote: "quote12" },
+  ];
 
 // Function to set a random background image and quote
 function setRandomBackground(backgrounds) {
     const backdropImg = document.getElementById("backdropimg");
-    const quoteText = document.getElementById("quote-text"); // Ensure this element exists in your HTML
-    const randomIndex = Math.floor(Math.random() * backgrounds.length);
+    const quoteText = document.getElementById("quote-text");
+    const randomIndex = Math.floor(Ma0th.random() * backgrounds.length);
     const selectedBackground = backgrounds[randomIndex];
     backdropImg.src = selectedBackground.image;
     quoteText.textContent = selectedBackground.quote;
 }
+setRandomBackground(backgrounds);
 
 // Function to update the local time clock
 function updateClock() {
@@ -85,11 +101,3 @@ function updateClock() {
     timeElement.textContent = `${formattedHours}:${formattedMinutes}`;
     paElement.textContent = ampm;
 }
-
-// Function to simulate getting a random quote
-function getRandomQuote() {
-    // Dummy function, replace with actual logic to fetch a random quote
-    const quotes = ["Quote 1", "Quote 2", "Quote 3"];
-    return quotes[Math.floor(Math.random() * quotes.length)];
-}
-

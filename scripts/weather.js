@@ -29,8 +29,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
         console.log(data);
 
-        var temp = data.main.temp;
-        temperature.innerHTML = temp + "° C";
+        var tempCelsius = data.main.temp;
+        var tempFahrenheit = (tempCelsius * 9 / 5) + 32;
+        temperature.innerHTML = tempFahrenheit.toFixed(2) + "° F";
         location.innerHTML = data.name;
         description.innerHTML = data.weather[0].main;
         var test = data.weather[0].icon;
