@@ -7,6 +7,17 @@
   right: 20px;
 }
 
+#quote-text {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 1.8em;
+  font-weight: 700;
+  margin: 0.4em;
+	color:rgb(253, 253, 252);
+	text-align: center;
+}
+
 .btn-outline-light{
   border-color: #5566AA;
 }
