@@ -3,11 +3,10 @@
 /* CSS to prevent scrolling */
 body {
   overflow: hidden; /* Prevent scrolling */
-  background-color: #99dd7a; /* Set background color */
-  margin: 0px; /* Remove default margin */
+  background-color: rgba(0, 0, 0, 0); /* Set background color */
   font-family: "Open Sans"; /* Set font family */
   user-select: none; /* Disable text selection */
-  height: 100vh; /* Set body height to fill the viewport */
+  height: 40vh; /* Set body height to fill the viewport */
 }
 
 /* CSS for h2 elements */
@@ -25,7 +24,7 @@ h2 {
 
 /* CSS for progress line */
 #progress-line {
-  background-color: rgba(255, 255, 255, 0); /* Set background color with transparency */
+  background-color: rgba(255, 255, 255, 0.836); /* Set background color with transparency */
   display: -webkit-flex; /* Enable flexbox layout (for older WebKit browsers) */
   display: flex; /* Enable flexbox layout */
 }
@@ -96,7 +95,7 @@ h2 {
 
 /* Scrollbar thumb styles */
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.17); /* Set the background color of the scrollbar thumb */
+  background: rgba(199, 10, 199, 0.17); /* Set the background color of the scrollbar thumb */
   border-radius: 4px; /* Apply border radius to the scrollbar thumb */
 }
 
@@ -122,31 +121,6 @@ button:focus {
   height: 100%; /* Set height to 100% */
   background-color: rgba(0, 0, 0, 0) /* Set background color */
 
-}
-
-/* Background image */
-#backdropimg {
-  transition: 0.5s; /* Set transition duration to 0.5s */
-  opacity: 0; /* Set initial opacity to 0 */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* Image path */
-#backdropimg {
-  background-image: url("Background images/bg1.jpg");
-  background-image: url("Background images/bg2.jpg");
-  background-image: url("Background images/bg3.jpg");
-  background-image: url("Background images/bg4.jpg");
-  background-image: url("Background images/bg5.jpg");
-  background-image: url("Background images/bg6.jpg");
-  background-image: url("Background images/bg7.jpg");
-  background-image: url("Background images/bg8.jpg");
-  background-image: url("Background images/bg9.jpg");
-  background-image: url("Background images/bg10.jpg");
-  background-image: url("Background images/bg11.jpg");
-  background-image: url("Background images/bg12.jpg");
 }
 
 /* Time widget */
