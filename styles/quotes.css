@@ -3,15 +3,20 @@
 
 #quote-container {
   position: fixed;
-  bottom: 20px;
+  bottom: calc(25vh + 20px); /* 1/4 up from the bottom */
   right: 20px;
+  font-size: 3em;
+  font-weight: 700;
+  margin: 0;
+  color: white;
+  text-align: center;
 }
 
 #quote-text {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  font-size: 4em;
+  font-size: 2em;
   font-weight: 700;
   margin: 0.4em;
 	color:rgb(253, 253, 252);
