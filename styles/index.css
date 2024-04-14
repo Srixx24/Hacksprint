@@ -102,11 +102,11 @@ button:focus {
 
 }
 
-}
 .time-container {
   display: flex;
   justify-content: center;
   align-items: baseline;
+  position: absolute;
 }
 
 /* Time widget */
@@ -121,6 +121,7 @@ button:focus {
   cursor: pointer; /* Cursor style */
   order: 1;
   font-size: 25vw;
+  display: inline-block;
 }
 
 /* AM/PM text element */
@@ -129,11 +130,8 @@ button:focus {
   font-family: "open sans"; /* Font family */
   font-weight: 400; /* Font weight */
   font-size: 2vw; /* Font size */
-  position: absolute; /* Positioning */
-  top: calc(9vw + 5px); /* Top position */
-  right: -20%; /* Right position */
-  order: 2;
-  font-size: 2vw;
+  display: inline-block;
+  vertical-align: middle; /* Aligns the text vertically */
 }
 
 
