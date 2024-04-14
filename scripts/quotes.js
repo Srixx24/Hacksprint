@@ -14,7 +14,7 @@ function getRandomQuote() {
         { quote: "If there is a book that you want to read, but it hasn't been written yet, you must be the one to write it. - Toni Morrison" },
         { quote: "The most common way people give up their power is by thinking they don't have any. - Alice Walker" },
         { quote: "I have learned over the years that when one's mind is made up, this diminishes fear; knowing what must be done does away with fear. - Rosa Parks" },
-        { quote: "You don't make progress by standing on the sidelines, whimpering and complaining. You make progress by implementing ideas. - Shirley Chisholm" },
+        { quote: "If you're not personally free to be yourself in that most important of all human activities -the expression of love - then life itself loses its meaning. - Harvey Milk" },
         { quote: "The kind of beauty I want most is the hard-to-get kind that comes from within - strength, courage, dignity. - Ruby Dee" }
     ];
 
