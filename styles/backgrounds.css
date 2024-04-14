@@ -1,58 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800;1,600&display=swap');
 
 
-body {
-  width: 500px;
-  margin: auto;
-  padding: 1.5em;
-  color: black;
-  font-family: "Open Sans";
-  display: flex;
-  flex-direction: column;
-  user-select: none;
-  animation: rotateBackground 30s infinite;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* Background image */
-@keyframes rotateBackground {
-  0% {
-    background-image: url("https://wallpapersmug.com/download/2560x1080/3ff1f0/colorful-galaxy-digital-art.jpg");
-  }
-  10% {
-    background-image: url("https://images.wallpapersden.com/image/download/space-windows-build-2019_a2ltaWWUmZqaraWkpJRnamtlrWZlbWU.jpg");
-  }
-  20% {
-    background-image: url("https://images.hdqwalls.com/download/4k-galaxy-space-i9-2560x1080.jpg");
-  }
-  30% {
-    background-image: url("https://wallpapersmug.com/download/2560x1080/cdb250/stars-galaxy-nebula-interstellar-milky-way.jpg");
-  }
-  40% {
-    background-image: url("https://images.wallpapersden.com/image/download/a-4k-galaxy-digital-universe_bWxmZ2aUmZqaraWkpJRnamtlrWZlbWU.jpg");
-  }
-  50% {
-    background-image: url("https://pxwall.com/wp-content/uploads/2018/04/galaxy-wallpaper-new.jpg");
-  }
-  60% {
-    background-image: url("https://wallpaper-house.com/data/out/6/wallpaper2you_107971.jpg");
-  }
-  70% {
-    background-image: url("https://cdn.wallpapersafari.com/95/60/iQbLIK.jpg");
-  }
-  80% {
-    background-image: url("https://www.pixelstalk.net/wp-content/uploads/images4/Colorful-Galaxy-Desktop-Wallpaper-Free-Download.jpg");
-  }
-  90% {
-    background-image: url("https://wallpaperbat.com/img/326939-green-space-wallpaper.jpg");
-  }
-  100% {
-    background-image: url("https://images.wallpaperscraft.com/image/single/galaxy_nebula_space_403420_2560x1080.jpg");
-  }
-}
-
 .btn-outline-light{
   border-color: #5566AA;
 }
