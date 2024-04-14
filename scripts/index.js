@@ -19,20 +19,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Toggle search bar visibility
-    const searchChange = document.getElementById("searchChange");
-    searchChange.addEventListener("click", function() {
-        const searchWrapper = document.getElementById("searchWrapper");
-        searchWrapper.classList.toggle("active");
-        const searchInput = document.getElementById("searchInput");
-        if (searchWrapper.classList.contains("active")) {
-            searchInput.focus();
-        } else {
-            searchInput.blur();
-        }
-    });
-});
-
 
 // Function to update the local time clock
 function updateClock() {
