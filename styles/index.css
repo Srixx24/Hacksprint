@@ -469,6 +469,34 @@ button:focus {
 
 #aboutButton {
   margin-left: 50px;
+  padding: 5px; /* Padding */
+  border-radius: 7px; /* Border radius */
+  color: rgba(255, 255, 255, 0.822); /* Text color */
+  background-color: rgba(255, 255, 255, 0.932) !important; /* Background color */
+  font-size: 20px; /* Font size */
+  font-family: "HelveticaNeue-Light", "open sans Light", "open sans", Helvetica, Arial, "Lucida Grande", sans-serif; /* Font family */
+  font-weight: 100; /* Font weight */
+  width: 18vw; /* Width */
+  border-color: rgba(79, 3, 122, 0.815) !important; /* Border color */
+  position: absolute; /* Positioning */
+  top: 50%; /* Top position */
+  left: 50%; /* Left position */
+}
+
+#infomenu {
+  padding: 5px; /* Padding */
+  border-radius: 7px; /* Border radius */
+  color: rgba(255, 255, 255, 0.822); /* Text color */
+  background-color: rgba(255, 255, 255, 0.932) !important; /* Background color */
+  font-size: 20px; /* Font size */
+  font-family: "HelveticaNeue-Light", "open sans Light", "open sans", Helvetica, Arial, "Lucida Grande", sans-serif; /* Font family */
+  font-weight: 100; /* Font weight */
+  width: 18vw; /* Width */
+  border-color: rgba(79, 3, 122, 0.815) !important; /* Border color */
+  position: absolute; /* Positioning */
+  top: 50%; /* Top position */
+  left: 50%; /* Left position */
+
 }
 
 /* Button hover effect */
