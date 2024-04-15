@@ -50,33 +50,60 @@
 - OpenWeather API: For current weather updates.
 - Astronomy API: For lunar phases and planetary aspects.
 
-## Setup 💫💫💫
+## Setup and Installation 💫💫💫
 <p align="left">-Step 1: Head to the project GitHub repo  <a href="https://github.com/Srixx24/Hacksprint">Hacksprint</a> from there you will click Code and copy the repo link</p> 
+
+![Step 1](https://github.com/Srixx24/Hacksprint/assets/144152489/125a12cf-dff3-4ff7-8a35-3de4dfc0c978)
+
 
 -Step 2: Open your terminal on your local computer, for this demo we will use Powershell. Then open the location you'd like to save the extension at (we are using Demo folder) with cd path/to/your/folder.
 
+![Step 2](https://github.com/Srixx24/Hacksprint/assets/144152489/e7f592fe-907b-437d-9447-ece08cb98928)
+
+
 -Step 3: When you are in the target location, enter git clone and paste the link. This will save the repository to your computer.
+
+![Step 3](https://github.com/Srixx24/Hacksprint/assets/144152489/e0f99c46-53b7-41b8-9f75-c538921d6fd7)
+
 
 -Step 4: Next you'll open your Google Chrome window and click on the three vertical dots in the corner. This will open a drop-down menu, go to extensions then click manage extensions. 
 
+![Step 5](https://github.com/Srixx24/Hacksprint/assets/144152489/bdbc47d8-8a0a-4276-855a-029315af4c4e)
+
+
 -Step 5: This will take you to the extensions page. From there you will click Load unpacked in the top left corner.
+
+![Step 6](https://github.com/Srixx24/Hacksprint/assets/144152489/8f3f7b4d-6529-402b-9771-aa8b55c6a00f)
+
 
 -Step 6: A window will pop up for you to locate the repository you saved in steps 1-3. Find your file, select Hacksprint, and click Select folder.
 
+![Step 7](https://github.com/Srixx24/Hacksprint/assets/144152489/d63d6dc0-545f-48cd-a857-ef65e1918575)
+![Step 8](https://github.com/Srixx24/Hacksprint/assets/144152489/be41334a-5e9c-4266-9cd2-247bae820ea6)
+
+
+
 -Step 7: Now the extension has been uploaded as an active extension in your Chrome profile. You will see it in the All Extensions menu, labeled Realms of Reality Portal.
+
+![Step 9](https://github.com/Srixx24/Hacksprint/assets/144152489/92dd109d-b3b7-48d9-903c-b01bd0537ba8)
+
 
 -Step 8: From there you may open new tabs and enjoy our Chrome extension!
 
+![Step 10](https://github.com/Srixx24/Hacksprint/assets/144152489/f0c86007-ba64-4042-9ea9-62c3a20e195d)
+
+
 ### Note: This extension will be available in the Chrome store soon! So steps 1-6 will be obsolete, you'll be able to get this free extension through Google's Chrome Web Store.
 
-
-## Prerequisites 💫💫💫
-
-## Installation 💫💫💫
-
-## Usage 💫💫💫
-
 ## Acknowledgements 💫💫💫
+
+Huge shoutout to Emily X. (emilyxietty) for her work in the ghiblify2 Chrome extension. She inspired this project and helped with some of our initial frameworks to bring you the Realms of Reality Portal extension.
+
+<br>
+
+##
+
+<br>
 
 <p align="center">
   <img width="350" src="https://github.com/Srixx24/Hacksprint/assets/144152489/dae45128-3d0b-40f2-a3a6-369fec5ac646">
