@@ -57,7 +57,7 @@ button.addEventListener('click', function() {
 
 // Hide the popup when clicking outside it
 document.addEventListener('click', function(event) {
-  if (!popup.contains(event.target) && !button.contains(event.target)) {
+  if (!popup.contains(event.target) && event.target !== button) {
     popup.style.display = 'none';
   }
 });
