@@ -508,3 +508,19 @@ button:focus {
   /* Vertical transformation */
   transform: translate(0px, 3px);
 }
+
+
+/* Moon Phases Styling */
+#moonPhases {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: white;
+  text-align: right;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for visibility */
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Subtle shadow for better readability */
+}
