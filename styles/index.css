@@ -244,30 +244,6 @@ button:focus {
   transition: all .2s cubic-bezier(.68, -0.2, .27, 1.55); /* Transition */
 }
 
-/* Styles for rightMenus on hover */
-#rightMenus:hover {
-  background-color: rgba(0, 0, 0, 0); /* Transparent background */
-  width: 350px; /* Expanded width on hover */
-  overflow: auto !important; /* Show scrollbar on hover */
-  scrollbar-color: rgba(255, 255, 255, 0.1) rgba(0, 0, 0, 0); /* Scrollbar color */
-  scrollbar-width: thin; /* Scrollbar width */
-}
-
-/* Hide scrollbar on hover */
-#rightMenus:hover ::-webkit-scrollbar {
-  display: none;
-}
-
-/* Title opacity and visibility on hover */
-#rightMenus:hover #bkList,
-#rightMenus:hover #bkTitle {
-  opacity: 0.7 !important; /* Semi-transparent on hover */
-  visibility: visible; /* Visible */
-  transition: all .17s ease; /* Transition */
-}
-
-
-
 /* Styles for bookmark folders */
 .bkFolder {
   padding-left: 12px; /* Left padding */
@@ -279,7 +255,6 @@ button:focus {
   border-left: 1px solid white; /* Left border */
   border-radius: 0px 4px 4px 0px; /* Border radius */
 }
-
 
 /* Styles for folder names */
 .folderName {
