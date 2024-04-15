@@ -417,6 +417,13 @@ button:focus {
   padding-right:30px;
 }
 
+.btn-group{
+  display:flex;
+  overflow:hide;
+  font-size:0.7em;
+  justify-content:center;
+}
+
 #aboutButton {
   margin-left: -445px;
   padding: 5px; /* Padding */
