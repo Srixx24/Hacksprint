@@ -126,7 +126,7 @@ button:focus {
 
 /* AM/PM text element */
 .pa {
-  color: rgba(255, 255, 255, 0.5); /* Text color */
+  color: rgba(8, 238, 8, 0.5); /* Text color */
   font-family: "open sans"; /* Font family */
   font-weight: 400; /* Font weight */
   font-size: 2vw; /* Font size */
@@ -221,7 +221,7 @@ button:focus {
   font-size: 20px;
   font-family: "HelveticaNeue-Light", "Open Sans Light", "Open Sans", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 100;
-  width: 40vw; /* You can adjust this value to fit your design */
+  width: 40vw;
   border: 3px solid rgba(79, 3, 122, 0.815);
   margin-bottom: 1rem; /* This will push the searchText down */
 }
@@ -284,7 +284,7 @@ button:focus {
 /* Styles for the menu when hovered or delayed */
 #menu:hover,
 #menu.delay {
-  background-color: #151f2e; /* Background color */
+  background-color: #4c6892bd; /* Background color */
   width: 350px; /* Expanded width */
   overflow: auto !important; /* Enable overflow scrolling */
   /* Firefox scrollbar */
@@ -407,6 +407,14 @@ button:focus {
   left: 50%;
   /* Disable text selection */
   user-select: none;
+}
+
+.buttonG {
+  display:flex;
+  justify-content:center;
+  text-align:center;
+  padding-left:30px;
+  padding-right:30px;
 }
 
 #aboutButton {
