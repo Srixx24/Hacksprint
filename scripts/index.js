@@ -52,5 +52,12 @@ var button = document.getElementById('aboutButton');
 var popup = document.getElementById('popupText');
 
 button.addEventListener('click', function() {
-  popup.classList.toggle('show-popup');
+  popup.style.display = 'block';
+});
+
+// Hide the popup when clicking outside it
+document.addEventListener('click', function(event) {
+  if (!popup.contains(event.target) && !button.contains(event.target)) {
+    popup.style.display = 'none';
+  }
 });
