@@ -9,7 +9,7 @@ function getRandomQuote() {
         { quote: "Thousands of candles can be lit from a single candle, and the life of the candle will not be shortened. Happiness never decreases by being shared. - Buddha" },
         { quote: "Cherish your visions and your dreams as they are the children of your soul, the blueprints of your ultimate achievements. - Napoleon Hill" },
         { quote: "The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart. - Helen Keller" },
-        { quote: "Embrace the questions in your heart and welcome that the answers will come their own time. All things worth having are worth waiting for. - Jackie Lovins" },
+        { quote: "Embrace the questions in your heart and welcome that the answers will come at their own time. All things worth having are worth waiting for. - Jackie Lovins" },
         { quote: "I am not free while any woman is unfree, even when her shackles are very different from my own. - Audre Lorde" },
         { quote: "If there is a book that you want to read, but it hasn't been written yet, you must be the one to write it. - Toni Morrison" },
         { quote: "The most common way people give up their power is by thinking they don't have any. - Alice Walker" },
