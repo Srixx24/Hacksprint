@@ -50,7 +50,7 @@
 - OpenWeather API: For current weather updates.
 - Astronomy API: For lunar phases and planetary aspects.
 
-## Setup 💫💫💫
+## Setup and Installation 💫💫💫
 <p align="left">-Step 1: Head to the project GitHub repo  <a href="https://github.com/Srixx24/Hacksprint">Hacksprint</a> from there you will click Code and copy the repo link</p> 
 
 ![Step 1](https://github.com/Srixx24/Hacksprint/assets/144152489/125a12cf-dff3-4ff7-8a35-3de4dfc0c978)
@@ -95,14 +95,15 @@
 
 ### Note: This extension will be available in the Chrome store soon! So steps 1-6 will be obsolete, you'll be able to get this free extension through Google's Chrome Web Store.
 
-
-## Prerequisites 💫💫💫
-
-## Installation 💫💫💫
-
-## Usage 💫💫💫
-
 ## Acknowledgements 💫💫💫
+
+Huge shoutout to Emily X. (emilyxietty) for her work in the ghiblify2 Chrome extension. She inspired this project and helped with some of our initial frameworks to bring you the Realms of Reality Portal extension.
+
+<br>
+
+##
+
+<br>
 
 <p align="center">
   <img width="350" src="https://github.com/Srixx24/Hacksprint/assets/144152489/dae45128-3d0b-40f2-a3a6-369fec5ac646">
