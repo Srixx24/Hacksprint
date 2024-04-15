@@ -13,7 +13,7 @@
 
 
 
-## Realms of Reality Portal is a custom Chrome Extension that includes a weather widget, inspirational quotes, a time display, and moon phase information. The aim of this project is to provide users with a visually appealing and functional dashboard every time they open their browser.
+## Realms of Reality Portal is a custom Chrome Extension that includes a weather widget, inspirational quotes, a time display, and a collection of useful links. The aim of this project is to provide users with a visually appealing and functional dashboard every time they open their browser.
 
 ## Features💫💫💫
 
@@ -22,8 +22,7 @@
 - **Inspirational Quotes**: A random quote from a curated list is displayed to inspire users throughout their day.
 - **Time Display**: The current time is prominently displayed in a large, readable format.
 - **Google Search Bar**: Fully functional search bar.
-- **Moon Phase Information**: Live data on the current phase of the moon is displayed in the corner of the screen.
-- **GitHub Links**: Quick access buttons to the project maintainers' GitHub profiles.
+- **Useful Links**: Quick access buttons to the project maintainers' GitHub profiles, Tarot, Runes, I Ching, Planetary Positions & Transits, Horoscopes, and Space News.
 
 ## Files💫💫💫
 
@@ -48,7 +47,6 @@
 
 ## APIs Used 💫💫💫
 - OpenWeather API: For current weather updates.
-- Astronomy API: For lunar phases and planetary aspects.
 
 ## Setup and Installation 💫💫💫
 <p align="left">-Step 1: Head to the project GitHub repo  <a href="https://github.com/Srixx24/Hacksprint">Hacksprint</a> from there you will click Code and copy the repo link</p> 
