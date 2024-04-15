@@ -13,7 +13,7 @@
 
 
 
-## Realms of Reality Portal is a custom Chrome Extension that includes a weather widget, inspirational quotes, a time display, and a collection of useful links. The aim of this project is to provide users with a visually appealing and functional dashboard every time they open their browser.
+## Realms of Reality Portal is a custom Chrome Extension that includes a weather widget, inspirational quotes, a time display, a google search bar, and a collection of useful links. The aim of this project is to provide users with a visually appealing and functional dashboard every time they open their browser.
 
 ## Features💫💫💫
 
