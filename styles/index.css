@@ -102,6 +102,13 @@ button:focus {
 
 }
 
+.time-container {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  position: absolute;
+}
+
 /* Time widget */
 .time {
   color: rgba(255, 255, 255, 0.85); /* Text color */
@@ -112,6 +119,9 @@ button:focus {
   margin-bottom: 12px; /* Bottom margin */
   margin-top: 30px; /* Top margin */
   cursor: pointer; /* Cursor style */
+  order: 1;
+  font-size: 25vw;
+  display: inline-block;
 }
 
 /* AM/PM text element */
@@ -120,10 +130,10 @@ button:focus {
   font-family: "open sans"; /* Font family */
   font-weight: 400; /* Font weight */
   font-size: 2vw; /* Font size */
-  position: absolute; /* Positioning */
-  top: calc(9vw + 5px); /* Top position */
-  right: -20%; /* Right position */
+  display: inline-block;
+  vertical-align: middle; /* Aligns the text vertically */
 }
+
 
 /* Time widget element */
 .info {
@@ -137,7 +147,7 @@ button:focus {
 
 /* Search widget */
 .search {
-  padding: 2px; /* Padding */
+  padding: 10px; /* Padding */
   border-radius: 9px; /* Border radius */
   color: black; /* Text color */
   background-color: rgba(255, 255, 255, 0.616) !important; /* Background color */
@@ -147,8 +157,9 @@ button:focus {
   width: 40vw; /* Width */
   border-color: rgba(79, 3, 122, 0.815) !important; /* Border color */
   position: absolute; /* Positioning */
-  top: 45%; /* Top position */
-  left: 36%; /* Left position */
+  top: 50%; /* Top position */
+  left: 50%; /* Left position */
+  transform: translate(-50%, -50%);
 }
 
 .search::placeholder {
@@ -175,16 +186,20 @@ button:focus {
 }
 
  /* search bar logic*/
- .searchDiv {
-  padding: 2px;
-  cursor: move;
+
+.searchDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 50%;
   left: 50%;
-  color: rgb(71, 148, 148);
   transform: translate(-50%, -50%);
-
- }
+  padding: 2px;
+  cursor: move;
+  color: rgb(71, 148, 148);
+}
 
  /* search bar text*/
  .searchText {
@@ -193,9 +208,24 @@ button:focus {
   color: darkturquoise;
   background-color: transparent;
   border: none;
-  width: 140%;
+  width: 40vw;
 
 }
+
+
+#searchInput {
+  padding: 10px;
+  border-radius: 9px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.616);
+  font-size: 20px;
+  font-family: "HelveticaNeue-Light", "Open Sans Light", "Open Sans", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 100;
+  width: 40vw; /* You can adjust this value to fit your design */
+  border: 1px solid rgba(79, 3, 122, 0.815);
+  margin-bottom: 1rem; /* This will push the searchText down */
+}
+
 
 /* Right Menus */
 #rightMenus {
@@ -207,7 +237,7 @@ button:focus {
   right: 0; /* Right position */
   height: 100%; /* Full height */
   width: 22px; /* Initial width */
-  overflow: hidden; /* Hide overflow content */
+  overflow: visible; /* Hide overflow content */
   padding-left: 20px; /* Left padding */
   font-size: 10px; /* Font size */
   font-family: "open sans"; /* Font family */
@@ -438,8 +468,10 @@ button:focus {
   width: 8vw; /* Width */
   border-color: rgba(79, 3, 122, 0.815) !important; /* Border color */
   position: absolute; /* Positioning */
-  top: 50%; /* Top position */
+  top: 10%; /* Top position */
   left: 50%; /* Left position */
+  right: 10%;
+  z-index: 8;
 }
 
 #infomenu {
