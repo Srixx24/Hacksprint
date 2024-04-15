@@ -51,6 +51,24 @@
 - Astronomy API: For lunar phases and planetary aspects.
 
 ## Setup 💫💫💫
+<p align="left">-Step 1: Head to the project GitHub repo  <a href="https://github.com/Srixx24/Hacksprint">Hacksprint</a> from there you will click Code and copy the repo link</p> 
+
+-Step 2: Open your terminal on your local computer, for this demo we will use Powershell. Then open the location you'd like to save the extension at (we are using Demo folder) with cd path/to/your/folder.
+
+-Step 3: When you are in the target location, enter git clone and paste the link. This will save the repository to your computer.
+
+-Step 4: Next you'll open your Google Chrome window and click on the three vertical dots in the corner. This will open a drop-down menu, go to extensions then click manage extensions. 
+
+-Step 5: This will take you to the extensions page. From there you will click Load unpacked in the top left corner.
+
+-Step 6: A window will pop up for you to locate the repository you saved in steps 1-3. Find your file, select Hacksprint, and click Select folder.
+
+-Step 7: Now the extension has been uploaded as an active extension in your Chrome profile. You will see it in the All Extensions menu, labeled Realms of Reality Portal.
+
+-Step 8: From there you may open new tabs and enjoy our Chrome extension!
+
+### Note: This extension will be available in the Chrome store soon! So steps 1-6 will be obsolete, you'll be able to get this free extension through Google's Chrome Web Store.
+
 
 ## Prerequisites 💫💫💫
 
