@@ -6,7 +6,7 @@
   bottom: calc(25vh + 20px); /* 1/4 up from the bottom */
   right: 20px;
   width: calc(100% - 40px); /* Add a width to constrain the text */
-  font-size: 2em;
+  font-size: 2vw;
   font-weight: 700;
   margin: 0;
   color: white;

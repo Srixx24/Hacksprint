@@ -441,7 +441,7 @@ button:focus {
 #aboutButton {
   margin-left: -445px;
   padding: 5px; /* Padding */
-  border-radius: 48px; /* Border radius */
+  border-radius: 48vw; /* Border radius */
   color: rgb(49, 46, 46); /* Text color */
   background-color: rgba(8, 8, 8, 0.644) !important; /* Background color */
   font-size: 20px; /* Font size */
