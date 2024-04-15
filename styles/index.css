@@ -351,6 +351,20 @@ button:focus {
   padding-right: 30px; /* Right padding */
 }
 
+/* Links buttons */
+.menuText3 {
+  background-color: rgba(255, 255, 255, 0) !important; /* Transparent background */
+  color: rgba(17, 80, 61, 0.95); /* Text color */
+  margin-top: 12px; /* Top margin */
+  margin-bottom: 3px; /* Bottom margin */
+  font-size: 15px; /* Font size */
+  font-family: "open sans"; /* Font family */
+  user-select: none; /* Disable text selection */
+  text-align: left; /* Text alignment */
+  padding-left: 30px; /* Left padding */
+  padding-right: 30px; /* Right padding */
+}
+
 /* Styles for menu item after pseudo-element */
 .menuItem:after {
   transition: opacity .2s ease-in-out; /* Transition effect */
