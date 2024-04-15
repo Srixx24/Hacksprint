@@ -157,14 +157,14 @@ button:focus {
   width: 40vw; /* Width */
   border-color: rgba(79, 3, 122, 0.815) !important; /* Border color */
   position: absolute; /* Positioning */
-  top: 50%; /* Top position */
+  top: 190%; /* Top position */
   left: 50%; /* Left position */
   transform: translate(-50%, -50%);
 }
 
 .search::placeholder {
-  color: #777; /* Or any color that shows up against the white */
-  opacity: 1; /* Older browsers need this to show the color */
+  color: #f0ebeb;
+  opacity: 1;
 }
 
 
@@ -222,7 +222,7 @@ button:focus {
   font-family: "HelveticaNeue-Light", "Open Sans Light", "Open Sans", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 100;
   width: 40vw; /* You can adjust this value to fit your design */
-  border: 1px solid rgba(79, 3, 122, 0.815);
+  border: 3px solid rgba(79, 3, 122, 0.815);
   margin-bottom: 1rem; /* This will push the searchText down */
 }
 
@@ -266,29 +266,7 @@ button:focus {
   transition: all .17s ease; /* Transition */
 }
 
-/* quote styles */
-#bkTitle {
-  background-color: rgba(255, 255, 255, 0) !important; /* Transparent background */
-  margin-top: 10px; /* Top margin */
-  margin-bottom: 10px; /* Bottom margin */
-  text-align: center; /* Center alignment */
-  user-select: none; /* Disable text selection */
-  color: rgba(255, 255, 255, 0.7); /* Text color */
-  font-size: 10px; /* Font size */
-  font-family: "open sans"; /* Font family */
-}
 
-/* Hide bkList and bkTitle by default */
-#rightMenus #bkList,
-#rightMenus #bkTitle {
-  visibility: hidden; /* Hidden */
-}
-
-/* Styles for bkList */
-#bkList {
-  padding-left: 15px; /* Left padding */
-  padding-right: 5px; /* Right padding */
-}
 
 /* Styles for bookmark folders */
 .bkFolder {
@@ -314,7 +292,7 @@ button:focus {
   user-select: none; /* Disable text selection */
 }
 
-/* Styles for the menu container */
+/* Styles for the hidden menu container */
 #menu {
   padding-top: 30px; /* Top padding */
   background-color: rgba(0, 0, 0, 0); /* Transparent background */
