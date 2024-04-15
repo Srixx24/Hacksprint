@@ -314,12 +314,12 @@ button:focus {
   left: 0;
 }
 
-/* our repo stuff */
+/* our repo title */
 .menuText {
   background-color: rgba(255, 255, 255, 0) !important; /* Transparent background */
   color: rgba(17, 80, 61, 0.95); /* Text color */
 
-  margin-top: 3px; /* Top margin */
+  margin-top: 12px; /* Top margin */
   margin-bottom: 3px; /* Bottom margin */
   font-size: 15px; /* Font size */
   font-family: "open sans"; /* Font family */
@@ -329,12 +329,12 @@ button:focus {
   padding-right: 30px; /* Right padding */
 }
 
-/* Additional style for menu text */
+/* Repo buttons */
 .menuText2 {
   background-color: rgba(255, 255, 255, 0) !important; /* Transparent background */
   color: rgba(17, 80, 61, 0.95); /* Text color */
 
-  margin-top: 3px; /* Top margin */
+  margin-top: 12px; /* Top margin */
   margin-bottom: 3px; /* Bottom margin */
   font-size: 15px; /* Font size */
   font-family: "open sans"; /* Font family */
@@ -427,8 +427,8 @@ button:focus {
 }
 
 .btn-group{
-  display:flex;
-  overflow:hide;
+  /*display:flex;*/
+  overflow:hidden;
   font-size:2.5em;
   justify-content:center;
 }
