@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Reality Check",
-  "version": "1.0.2",
+  "name": "Realms of Reality Portal",
+  "version": "1.0.9",
   "short_name": "Reality",
   "description": "Hacksprint Reality project",
   "permissions": ["storage", "bookmarks", "geolocation"],

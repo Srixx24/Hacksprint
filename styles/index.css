@@ -192,7 +192,7 @@ button:focus {
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 54%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 2px;
@@ -202,15 +202,16 @@ button:focus {
 
  /* search bar text*/
  .searchText {
-  font-size: 2vw;
+  font-size: 2.5vw;
   text-align: center;
-  color: darkturquoise;
   background-color: transparent;
   border: none;
-  width: 40vw;
-
+  width: 50vw;
 }
 
+.underline-title {
+  text-decoration: underline;
+}
 
 #searchInput {
   padding: 10px;
@@ -468,7 +469,6 @@ button:focus {
 
 /* Button hover effect */
 .button:hover {
-  /* Background color with increased transparency */
   background-color: rgba(218, 103, 179, 0.425);
 }
 
@@ -483,4 +483,18 @@ button:focus {
 .buttIcons {
   /* Vertical transformation */
   transform: translate(0px, 3px);
+}
+
+/* Tab image*/
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.image {
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
