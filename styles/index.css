@@ -450,8 +450,8 @@ button:focus {
   width: 8vw; /* Width */
   border-color: rgba(79, 3, 122, 0.815) !important; /* Border color */
   position: absolute; /* Positioning */
-  top: 10%; /* Top position */
-  left: 50%; /* Left position */
+  top: 325%; /* Top position */
+  left: 365%; /* Left position */
   right: 10%;
   z-index: 8;
   user-select: none; /* Disable text selection */
