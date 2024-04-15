@@ -286,7 +286,9 @@ button:focus {
 
 /* Styles for the menu when hovered or delayed */
 #menu:hover,
-#menu.delay {
+#menu.delay,
+#buttonG:hover,
+#buttonG.delay {
   background-color: #4c6892bd; /* Background color */
   width: 350px; /* Expanded width */
   overflow: auto !important; /* Enable overflow scrolling */
@@ -302,7 +304,9 @@ button:focus {
 #menu:hover .slidecontainer,
 #menu.delay .menuText,
 #menu.delay .sliderWrapper,
-#menu.delay .slidecontainer {
+#menu.delay .slidecontainer,
+#buttonG:hover .aboutButton,
+#buttonG.delay .aboutButton {
   opacity: 0.9 !important; /* Opacity */
   visibility: visible; /* Visibility */
   transition: all .17s ease; /* Transition effect */
@@ -321,7 +325,6 @@ button:focus {
 .menuText {
   background-color: rgba(255, 255, 255, 0) !important; /* Transparent background */
   color: rgba(17, 80, 61, 0.95); /* Text color */
-
   margin-top: 12px; /* Top margin */
   margin-bottom: 3px; /* Bottom margin */
   font-size: 15px; /* Font size */
@@ -336,7 +339,6 @@ button:focus {
 .menuText2 {
   background-color: rgba(255, 255, 255, 0) !important; /* Transparent background */
   color: rgba(17, 80, 61, 0.95); /* Text color */
-
   margin-top: 12px; /* Top margin */
   margin-bottom: 3px; /* Bottom margin */
   font-size: 15px; /* Font size */
@@ -452,6 +454,8 @@ button:focus {
   left: 50%; /* Left position */
   right: 10%;
   z-index: 8;
+  user-select: none; /* Disable text selection */
+  text-align: left; /* Text alignment */
 }
 
 #infomenu {
@@ -471,7 +475,8 @@ button:focus {
 }
 
 /* Button hover effect */
-.button:hover {
+.button:hover,
+.buttonG:hover{
   background-color: rgba(218, 103, 179, 0.425);
 }
 
