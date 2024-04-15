@@ -107,6 +107,8 @@ button:focus {
   justify-content: center;
   align-items: baseline;
   position: absolute;
+  right: 44vw;
+  top: 1vw;
 }
 
 /* Time widget */
