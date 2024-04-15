@@ -19,21 +19,22 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    var button = document.getElementById('aboutButton');
-    var popup = document.getElementById('popupText');
+var button = document.getElementById('aboutButton');
+var popup = document.getElementById('popupText');
 
-    // Display the popup when clicking the button
-    button.addEventListener('click', function() {
-      popup.style.display = 'block';
-    });
-
-    // Hide the popup when clicking outside it
-    document.addEventListener('click', function(event) {
-      if (!popup.contains(event.target) && event.target !== button) {
-        popup.style.display = 'none';
-      }
-    });
+// Display the popup when clicking the button
+button.addEventListener('click', function(event) {
+  popup.style.display = 'block';
+  event.stopPropagation(); // Prevent the click from propagating to the document
 });
+
+// Hide the popup when clicking outside it
+document.addEventListener('click', function(event) {
+  if (!popup.contains(event.target)) {
+    popup.style.display = 'none';
+  }
+});
+
 
 // Function to update the local time clock
 function updateClock() {
