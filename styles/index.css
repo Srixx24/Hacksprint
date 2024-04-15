@@ -186,14 +186,13 @@ button:focus {
 }
 
  /* search bar logic*/
-
 .searchDiv {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 50%;
+  top: 54%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 2px;
@@ -223,7 +222,7 @@ button:focus {
   font-weight: 100;
   width: 40vw;
   border: 3px solid rgba(79, 3, 122, 0.815);
-  margin-bottom: 1rem; /* This will push the searchText down */
+  margin-bottom: 1rem;
 }
 
 
