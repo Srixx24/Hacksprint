@@ -484,17 +484,3 @@ button:focus {
   /* Vertical transformation */
   transform: translate(0px, 3px);
 }
-
-/* Tab image*/
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-.image {
-  max-width: 300px;
-  max-height: 300px;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
