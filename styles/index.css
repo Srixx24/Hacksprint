@@ -107,8 +107,8 @@ button:focus {
   justify-content: center;
   align-items: baseline;
   position: absolute;
-  right: 44vw;
-  top: 1vw;
+  right: 2vw;
+  top: -5vw;
 }
 
 /* Time widget */
@@ -194,7 +194,7 @@ button:focus {
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 55%;
+  top: 56%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 2px;
@@ -444,7 +444,7 @@ button:focus {
   margin-left: -445px;
   padding: 5px; /* Padding */
   border-radius: 48vw; /* Border radius */
-  color: rgb(49, 46, 46); /* Text color */
+  color: rgb(90, 83, 83); /* Text color */
   background-color: rgba(8, 8, 8, 0.644) !important; /* Background color */
   font-size: 20px; /* Font size */
   font-family: "HelveticaNeue-Light", "open sans Light", "open sans", Helvetica, Arial, "Lucida Grande", sans-serif; /* Font family */
@@ -455,7 +455,6 @@ button:focus {
   top: 80%; /* Top position */
   right: 3%;
   z-index: 8;
-  user-select: none; /* Disable text selection */
   text-align: left; /* Text alignment */
 }
 
