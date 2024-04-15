@@ -355,13 +355,13 @@ button:focus {
 .menuText3 {
   background-color: rgba(255, 255, 255, 0) !important; /* Transparent background */
   color: rgba(17, 80, 61, 0.95); /* Text color */
-  margin-top: 12px; /* Top margin */
+  margin-top: 100px; /* Top margin */
   margin-bottom: 3px; /* Bottom margin */
-  font-size: 15px; /* Font size */
+  font-size: 14px; /* Font size */
   font-family: "open sans"; /* Font family */
   user-select: none; /* Disable text selection */
   text-align: left; /* Text alignment */
-  padding-left: 30px; /* Left padding */
+  padding-left: 16px; /* Left padding */
   padding-right: 30px; /* Right padding */
 }
 
@@ -413,6 +413,14 @@ button:focus {
 .btn-outline-light{
   font-size:0.8em;
   border-color: #5566AA;
+  padding: 5px;
+  border-radius: 48px;
+  color: chartreuse;
+  background-color: slategray;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-color: violet;
+  position: relative;
+  z-index: 8;
 }
 
 .btn-outline-light:hover{
