@@ -107,8 +107,8 @@ button:focus {
   justify-content: center;
   align-items: baseline;
   position: absolute;
-  right: 44vw;
-  top: 1vw;
+  right: 82vw;
+  top: 2vw;
 }
 
 /* Time widget */
@@ -194,7 +194,7 @@ button:focus {
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 55%;
+  top: 56%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 2px;

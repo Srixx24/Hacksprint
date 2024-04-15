@@ -47,3 +47,10 @@ function updateClock() {
     timeElement.textContent = `${formattedHours}:${formattedMinutes}`;
     paElement.textContent = ampm;
 }
+
+var button = document.getElementById('aboutButton');
+var popup = document.getElementById('popupText');
+
+button.addEventListener('click', function() {
+  popup.classList.toggle('show-popup');
+});
