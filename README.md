@@ -58,10 +58,6 @@
 
 ## Usage 💫💫💫
 
-## Authors 💫💫💫
-Vie Paula - [Github](https://github.com/ThatsVie)
-
-Jackie Lovins - [Github](https://github.com/Srixx24)
 ## Acknowledgements 💫💫💫
 
 <p align="center">
