@@ -206,6 +206,7 @@ button:focus {
   text-align: center;
   background-color: transparent;
   font-weight: bold;
+  color: #f0ebeb;
   text-shadow: -3px 2px black;
   border: none;
   width: 50vw;
