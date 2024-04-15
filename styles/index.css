@@ -107,6 +107,8 @@ button:focus {
   justify-content: center;
   align-items: baseline;
   position: absolute;
+  right: 44vw;
+  top: 1vw;
 }
 
 /* Time widget */
@@ -126,7 +128,7 @@ button:focus {
 
 /* AM/PM text element */
 .pa {
-  color: rgba(255, 255, 255, 0.5); /* Text color */
+  color: rgba(8, 238, 8, 0.5); /* Text color */
   font-family: "open sans"; /* Font family */
   font-weight: 400; /* Font weight */
   font-size: 2vw; /* Font size */
@@ -157,14 +159,14 @@ button:focus {
   width: 40vw; /* Width */
   border-color: rgba(79, 3, 122, 0.815) !important; /* Border color */
   position: absolute; /* Positioning */
-  top: 50%; /* Top position */
+  top: 190%; /* Top position */
   left: 50%; /* Left position */
   transform: translate(-50%, -50%);
 }
 
 .search::placeholder {
-  color: #777; /* Or any color that shows up against the white */
-  opacity: 1; /* Older browsers need this to show the color */
+  color: #f0ebeb;
+  opacity: 1;
 }
 
 
@@ -186,14 +188,13 @@ button:focus {
 }
 
  /* search bar logic*/
-
 .searchDiv {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 2px;
@@ -203,15 +204,19 @@ button:focus {
 
  /* search bar text*/
  .searchText {
-  font-size: 2vw;
+  font-size: 2.5vw;
   text-align: center;
-  color: darkturquoise;
   background-color: transparent;
+  font-weight: bold;
+  color: #f0ebeb;
+  text-shadow: -3px 2px black;
   border: none;
-  width: 40vw;
-
+  width: 50vw;
 }
 
+.underline-title {
+  text-decoration: underline;
+}
 
 #searchInput {
   padding: 10px;
@@ -221,9 +226,9 @@ button:focus {
   font-size: 20px;
   font-family: "HelveticaNeue-Light", "Open Sans Light", "Open Sans", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 100;
-  width: 40vw; /* You can adjust this value to fit your design */
-  border: 1px solid rgba(79, 3, 122, 0.815);
-  margin-bottom: 1rem; /* This will push the searchText down */
+  width: 40vw;
+  border: 3px solid rgba(79, 3, 122, 0.815);
+  margin-bottom: 1rem;
 }
 
 
@@ -244,52 +249,6 @@ button:focus {
   transition: all .2s cubic-bezier(.68, -0.2, .27, 1.55); /* Transition */
 }
 
-/* Styles for rightMenus on hover */
-#rightMenus:hover {
-  background-color: rgba(0, 0, 0, 0); /* Transparent background */
-  width: 350px; /* Expanded width on hover */
-  overflow: auto !important; /* Show scrollbar on hover */
-  scrollbar-color: rgba(255, 255, 255, 0.1) rgba(0, 0, 0, 0); /* Scrollbar color */
-  scrollbar-width: thin; /* Scrollbar width */
-}
-
-/* Hide scrollbar on hover */
-#rightMenus:hover ::-webkit-scrollbar {
-  display: none;
-}
-
-/* Title opacity and visibility on hover */
-#rightMenus:hover #bkList,
-#rightMenus:hover #bkTitle {
-  opacity: 0.7 !important; /* Semi-transparent on hover */
-  visibility: visible; /* Visible */
-  transition: all .17s ease; /* Transition */
-}
-
-/* quote styles */
-#bkTitle {
-  background-color: rgba(255, 255, 255, 0) !important; /* Transparent background */
-  margin-top: 10px; /* Top margin */
-  margin-bottom: 10px; /* Bottom margin */
-  text-align: center; /* Center alignment */
-  user-select: none; /* Disable text selection */
-  color: rgba(255, 255, 255, 0.7); /* Text color */
-  font-size: 10px; /* Font size */
-  font-family: "open sans"; /* Font family */
-}
-
-/* Hide bkList and bkTitle by default */
-#rightMenus #bkList,
-#rightMenus #bkTitle {
-  visibility: hidden; /* Hidden */
-}
-
-/* Styles for bkList */
-#bkList {
-  padding-left: 15px; /* Left padding */
-  padding-right: 5px; /* Right padding */
-}
-
 /* Styles for bookmark folders */
 .bkFolder {
   padding-left: 12px; /* Left padding */
@@ -302,7 +261,6 @@ button:focus {
   border-radius: 0px 4px 4px 0px; /* Border radius */
 }
 
-
 /* Styles for folder names */
 .folderName {
   padding-left: 0px; /* Left padding */
@@ -314,7 +272,7 @@ button:focus {
   user-select: none; /* Disable text selection */
 }
 
-/* Styles for the menu container */
+/* Styles for the hidden menu container */
 #menu {
   padding-top: 30px; /* Top padding */
   background-color: rgba(0, 0, 0, 0); /* Transparent background */
@@ -330,8 +288,10 @@ button:focus {
 
 /* Styles for the menu when hovered or delayed */
 #menu:hover,
-#menu.delay {
-  background-color: #151f2e; /* Background color */
+#menu.delay,
+#buttonG:hover,
+#buttonG.delay {
+  background-color: #4c6892bd; /* Background color */
   width: 350px; /* Expanded width */
   overflow: auto !important; /* Enable overflow scrolling */
   /* Firefox scrollbar */
@@ -346,7 +306,9 @@ button:focus {
 #menu:hover .slidecontainer,
 #menu.delay .menuText,
 #menu.delay .sliderWrapper,
-#menu.delay .slidecontainer {
+#menu.delay .slidecontainer,
+#buttonG:hover .aboutButton,
+#buttonG.delay .aboutButton {
   opacity: 0.9 !important; /* Opacity */
   visibility: visible; /* Visibility */
   transition: all .17s ease; /* Transition effect */
@@ -361,12 +323,11 @@ button:focus {
   left: 0;
 }
 
-/* our repo stuff */
+/* our repo title */
 .menuText {
-  background-color: rgba(255, 255, 255, 0.171) !important; /* Transparent background */
+  background-color: rgba(255, 255, 255, 0) !important; /* Transparent background */
   color: rgba(17, 80, 61, 0.95); /* Text color */
-
-  margin-top: 3px; /* Top margin */
+  margin-top: 12px; /* Top margin */
   margin-bottom: 3px; /* Bottom margin */
   font-size: 15px; /* Font size */
   font-family: "open sans"; /* Font family */
@@ -376,18 +337,16 @@ button:focus {
   padding-right: 30px; /* Right padding */
 }
 
-/* Additional style for menu text */
+/* Repo buttons */
 .menuText2 {
   background-color: rgba(255, 255, 255, 0) !important; /* Transparent background */
-  color: white; /* Text color */
-
-  margin-top: 3px; /* Top margin */
-  margin-bottom: 10px; /* Bottom margin */
+  color: rgba(17, 80, 61, 0.95); /* Text color */
+  margin-top: 12px; /* Top margin */
+  margin-bottom: 3px; /* Bottom margin */
   font-size: 15px; /* Font size */
   font-family: "open sans"; /* Font family */
   user-select: none; /* Disable text selection */
   text-align: left; /* Text alignment */
-  font-weight: 600; /* Font weight */
   padding-left: 30px; /* Left padding */
   padding-right: 30px; /* Right padding */
 }
@@ -437,6 +396,16 @@ button:focus {
   opacity: 1;
 }
 
+.btn-outline-light{
+  font-size:0.8em;
+  border-color: #5566AA;
+}
+
+.btn-outline-light:hover{
+  background-color: #DD9999;
+  border-color: #DD9999;
+}
+
 /* Repo button */
 .button {
   /* Background color with transparency */
@@ -456,10 +425,25 @@ button:focus {
   user-select: none;
 }
 
+.buttonG {
+  display:flex;
+  justify-content:center;
+  text-align:center;
+  padding-left:30px;
+  padding-right:30px;
+}
+
+.btn-group{
+  /*display:flex;*/
+  overflow:hidden;
+  font-size:2.5em;
+  justify-content:center;
+}
+
 #aboutButton {
   margin-left: -445px;
   padding: 5px; /* Padding */
-  border-radius: 48px; /* Border radius */
+  border-radius: 48vw; /* Border radius */
   color: rgb(49, 46, 46); /* Text color */
   background-color: rgba(8, 8, 8, 0.644) !important; /* Background color */
   font-size: 20px; /* Font size */
@@ -468,10 +452,11 @@ button:focus {
   width: 8vw; /* Width */
   border-color: rgba(79, 3, 122, 0.815) !important; /* Border color */
   position: absolute; /* Positioning */
-  top: 10%; /* Top position */
-  left: 50%; /* Left position */
-  right: 10%;
+  top: 80%; /* Top position */
+  right: 3%;
   z-index: 8;
+  user-select: none; /* Disable text selection */
+  text-align: left; /* Text alignment */
 }
 
 #infomenu {
@@ -491,8 +476,8 @@ button:focus {
 }
 
 /* Button hover effect */
-.button:hover {
-  /* Background color with increased transparency */
+.button:hover,
+.buttonG:hover{
   background-color: rgba(218, 103, 179, 0.425);
 }
 
@@ -507,20 +492,4 @@ button:focus {
 .buttIcons {
   /* Vertical transformation */
   transform: translate(0px, 3px);
-}
-
-
-/* Moon Phases Styling */
-#moonPhases {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  color: white;
-  text-align: right;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for visibility */
-  border-radius: 8px;
-  font-size: 14px;
-  font-family: 'Open Sans', sans-serif;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Subtle shadow for better readability */
 }

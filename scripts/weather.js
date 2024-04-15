@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
         location.innerHTML = data.name;
         description.innerHTML = data.weather[0].main;
         var weatherType = data.weather[0].icon;
-        var fileName = `<img src="icons weather/Puggy.gif" width = "200">`;
+        var fileName = `<img src="icons weather/Puggy.gif" width = "100">`;
         locationIcon.innerHTML = fileName;
       } catch (error) {
         location.innerHTML = "Unable to retrieve your location";

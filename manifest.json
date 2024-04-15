@@ -1,11 +1,16 @@
 {
   "manifest_version": 3,
   "name": "Realms of Reality Portal",
-  "version": "1.0.2",
+  "version": "1.0.9",
   "short_name": "Reality",
   "description": "Hacksprint Reality project",
   "permissions": ["storage", "bookmarks", "geolocation"],
   "chrome_url_overrides": {
     "newtab": "index.html"
+  },
+  "icons": {
+    "16": "icons/kitty.png",
+    "32": "icons/kitty.png",
+    "48": "icons/kitty.png"
   }
 }

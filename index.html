@@ -20,7 +20,6 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" type="text/css" href="styles/index.css">
   <link rel="stylesheet" type="text/css" href="styles/quotes.css">
-  <link rel="stylesheet" type="text/css" href="styles/backgrounds.css">
 
   <!-- Local JavaScript -->
   <script src="scripts/jquery-3.6.0.min.js"></script>
@@ -31,32 +30,22 @@
   <script type="text/javascript" src="scripts/weather.js"></script>
   <script type="text/javascript" src="scripts/quotes.js"></script>
   <script type="text/javascript" src="scripts/hide.js"></script>
-  <script type="text/javascript" src="scrips/moon.js"></script>
 </head>
 </head>
 
 <body>
   <div ID="menu">
-    <div id="menu" onmouseover="showMenu()" onmouseout="hideMenu()"></div>
     <div class="menuText" style="color: rgba(255,255,255,0.95) !important; font-size: 0.9em !important; color: white !important;font-weight: 600">Our githubs</div>
 
-      <div class="sliderWrapper">
+      <div class="menuText2">
 
       <div class="btn-group" role="group" aria-label="Basic example">
 
-        <a role="button" class="btn btn-outline-light"href="https://github.com/Srixx24/" target="_blank">Jackie github</a>
+        <a role="button" class="btn btn-outline-light"href="https://github.com/Srixx24/" target="_blank">Jackie's github</a>
        <br>
-        <a role="button" class="btn btn-outline-light"href="https://github.com/ThatsVie/" target="_blank">Vie github</a>
+        <a role="button" class="btn btn-outline-light"href="https://github.com/ThatsVie/" target="_blank">Vie's github</a>
       </div>
     </div>
-     <!-- Buttons -->
-   <div class="container">
-    <div class=" buttonWrapper">
-      <button id="aboutButton" class="btn btn-dark">
-        <i class="material-icons buttIcons md-36">info</i>
-      </button>
-    </div>
-   </div>
   </div>
 
   <!-- Background -->
@@ -69,19 +58,19 @@
   <div class="searchDiv">
       <form id="search" action="https://www.google.com/search" method="get">
         <input id="searchInput" class="search" data-placeholder=" Google Search" type="search" name="q" autocomplete="off" />
-        <input type="text" class="searchText" placeholder="All the worlds knowledge is before you">
         <input type="submit" style="display: none;" />
       </form>
   </div>
+  <div class="searchText" id="searchText">All the worlds knowledge is before you</div>
 
   <!-- Quote logic-->
   <div class="container">
     <div id="quote-container">
-      <h1>Words of wisdom 🔮</h1>
+      <h3 class="underline-title">Words of wisdom 🔮</h3>
       <div class="quote-text" id="quote-text"></div>
   </div>
 
-   
+
 
     <!-- Blank space -->
     <div class="menuText" style="color: transparent !important; font-size: 34px;">.</div>
@@ -92,23 +81,26 @@
   <div class="widgetcont">
     <!-- Weather information -->
     <div id="panel" style="position: fixed; top: 0; right: 1%; background-color: transparent; z-index: 9999;">
-      <ol class="weather-icon"><img src="icons weather/space.gif" width="50"/></ol>
+      <ol class="weather-icon"><img src="icons weather/space.gif" width="100"/></ol>
       <div id="weather" style="color: rgba(255,255,255,0.9)"></div>
-      <div id="temperature" style="padding-left: 0.5em; color: rgba(255,255,255,0.9); font-size: 1.8rem; font-weight: 700;"></div>
-      <ol id="description" style="color: rgba(255,255,255,0.9)"></ol>
-      <ol id="location" style="color: rgba(255,255,255,0.9)"></ol>
-      <ol id="ico" style="color: rgba(255,255,255,0.0)"></ol>
+      <div id="temperature" style="padding-left: 0.5em; color: rgba(255,255,255,0.9); font-size: 2vw; font-weight: 700;"></div>
+      <ol id="description" style="color: rgba(255,255,255,0.9); font-size: 1.5vw;"></ol>
+      <ol id="location" style="color: rgba(255,255,255,0.9); font-size: 1.5vw;"></ol>
       <!-- Time and AM/PM container -->
       <div class="time-container">
-        <div id="time" style="color: rgba(255,255,255,0.9); font-size: 3rem; font-weight: 700;"></div>
-        <div id="pa" style="color: rgba(255,255,255,0.9); font-size: 1.4rem; font-weight: 600;"></div>
-
-	  <!-- Moon Phases -->
-      <div id="moonPhases" style="position: absolute; bottom: 10px; right: 10px; color: white;">
-        <!-- Moon phase data will be inserted here by the JavaScript -->
+        <div id="time" style="color: rgba(255,255,255,0.9); font-size: 4vw; font-weight: 700;"></div>
+        <div id="pa" style="color: rgba(255,255,255,0.9); font-size: 2vw; font-weight: 600;"></div>
       </div>
     </div>
   </div>
+     <!-- Buttons -->
+     <div class="buttonG" role="group" aria-label="Basic example">
+      <div class=" buttonWrapper">
+        <button id="aboutButton" class="btn btn-dark">
+          <i class="material-icons buttIcons md-36">info</i>
+        </button>
+      </div>
+     </div>
 </div>
 
 </body>
