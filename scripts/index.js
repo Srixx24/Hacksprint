@@ -19,20 +19,21 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Toggle search bar visibility
-    const searchChange = document.getElementById("searchChange");
-    searchChange.addEventListener("click", function() {
-        const searchWrapper = document.getElementById("searchWrapper");
-        searchWrapper.classList.toggle("active");
-        const searchInput = document.getElementById("searchInput");
-        if (searchWrapper.classList.contains("active")) {
-            searchInput.focus();
-        } else {
-            searchInput.blur();
-        }
+    var button = document.getElementById('aboutButton');
+    var popup = document.getElementById('popupText');
+
+    // Display the popup when clicking the button
+    button.addEventListener('click', function() {
+      popup.style.display = 'block';
+    });
+
+    // Hide the popup when clicking outside it
+    document.addEventListener('click', function(event) {
+      if (!popup.contains(event.target) && event.target !== button) {
+        popup.style.display = 'none';
+      }
     });
 });
-
 
 // Function to update the local time clock
 function updateClock() {
@@ -47,17 +48,3 @@ function updateClock() {
     timeElement.textContent = `${formattedHours}:${formattedMinutes}`;
     paElement.textContent = ampm;
 }
-
-var button = document.getElementById('aboutButton');
-var popup = document.getElementById('popupText');
-
-button.addEventListener('click', function() {
-  popup.style.display = 'block';
-});
-
-// Hide the popup when clicking outside it
-document.addEventListener('click', function(event) {
-  if (!popup.contains(event.target) && event.target !== button) {
-    popup.style.display = 'none';
-  }
-});
