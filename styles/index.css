@@ -465,11 +465,11 @@ button:focus {
 #aboutButton {
   margin-left: -445px;
   display: inline;
-  padding: 5px; /* Padding */
+  padding: 1vw; /* Padding */
   border-radius: 48vw; /* Border radius */
   color:  rgb(138 231 228); /* Text color */
   background-color: rgba(8, 8, 8, 0.644) !important; /* Background color */
-  font-size: 20px; /* Font size */
+  font-size: 2vw; /* Font size */
   font-family: "HelveticaNeue-Light", "open sans Light", "open sans", Helvetica, Arial, "Lucida Grande", sans-serif; /* Font family */
   font-weight: 100; /* Font weight */
   width: 18vw; /* Width */
