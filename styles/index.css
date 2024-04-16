@@ -424,7 +424,8 @@ button:focus {
 }
 
 .btn-outline-light:hover
-.aboutButton {
+.aboutButton:hover 
+.button:hover {
   background-color: #DD9999;
   border-color: #DD9999;
 }
@@ -456,7 +457,6 @@ button:focus {
 }
 
 .btn-group{
-  /*display:flex;*/
   overflow:hidden;
   font-size:2.5em;
   justify-content:center;
@@ -501,20 +501,18 @@ button:focus {
 /* Button hover effect */
 .button:hover,
 .buttonG:hover 
-#aboutButton {
+.aboutButton:hover {
   background-color: rgba(218, 103, 179, 0.425);
 }
 
 /* Button wrapper styles for info */
 .buttonWrapper {
-  /* Bottom margin */
   top: 30%;
   left: 15%;
 }
 
 /* Button icons */
 .buttIcons {
-  /* Vertical transformation */
   transform: translate(0px, 3px);
   color: #f0ebeb;
 }
