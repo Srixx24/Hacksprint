@@ -463,18 +463,19 @@ button:focus {
 }
 
 #aboutButton {
-  margin-left: -445px;
+  margin-left: -34px;
+  margin-top: 294px;
   display: inline;
   padding: 1vw; /* Padding */
   border-radius: 48vw; /* Border radius */
   color:  rgb(138 231 228); /* Text color */
   background-color: rgba(8, 8, 8, 0.644) !important; /* Background color */
-  font-size: 2vw; /* Font size */
+  font-size: 15px; /* Font size */
   font-family: "HelveticaNeue-Light", "open sans Light", "open sans", Helvetica, Arial, "Lucida Grande", sans-serif; /* Font family */
   font-weight: 100; /* Font weight */
-  width: 18vw; /* Width */
+  width: 138px; /* Width */
   border-color: rgba(79, 3, 122, 0.815) !important; /* Border color */
-  position: absolute; /* Positioning */
+  position: static; /* Positioning */
   top: 80%; /* Top position */
   right: 25%;
   z-index: 8;
