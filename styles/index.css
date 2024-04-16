@@ -423,10 +423,7 @@ button:focus {
   z-index: 8;
 }
 
-.btn-outline-light:hover
-.aboutButton:hover 
-.button:hover
-.btn-group:hover {
+.btn-outline-light:hover {
   background-color: #DD9999;
   border-color: #DD9999;
 }
@@ -435,7 +432,7 @@ button:focus {
 .button {
   /* Background color with transparency */
   background-color: rgba(179, 170, 170, 0.459);
-  border-color: #040105;
+  border-color: none;
   /* Font size */
   font-size: 24px;
   position: absolute;
@@ -501,8 +498,7 @@ button:focus {
 
 /* Button hover effect */
 .button:hover,
-.buttonG:hover 
-.aboutButton:hover {
+.buttonG:hover  {
   background-color: rgba(218, 103, 179, 0.425);
 }
 
