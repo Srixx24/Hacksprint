@@ -425,7 +425,8 @@ button:focus {
 
 .btn-outline-light:hover
 .aboutButton:hover 
-.button:hover {
+.button:hover
+.btn-group:hover {
   background-color: #DD9999;
   border-color: #DD9999;
 }
