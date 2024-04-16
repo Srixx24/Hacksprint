@@ -423,7 +423,8 @@ button:focus {
   z-index: 8;
 }
 
-.btn-outline-light:hover{
+.btn-outline-light:hover
+.aboutButton {
   background-color: #DD9999;
   border-color: #DD9999;
 }
@@ -432,8 +433,7 @@ button:focus {
 .button {
   /* Background color with transparency */
   background-color: rgba(179, 170, 170, 0.459);
-  /* No border */
-  border: none;
+  border-color: #040105;
   /* Font size */
   font-size: 24px;
   position: absolute;
@@ -464,6 +464,7 @@ button:focus {
 
 #aboutButton {
   margin-left: -445px;
+  display: inline;
   padding: 5px; /* Padding */
   border-radius: 48vw; /* Border radius */
   color: rgb(90, 83, 83); /* Text color */
@@ -475,7 +476,7 @@ button:focus {
   border-color: rgba(79, 3, 122, 0.815) !important; /* Border color */
   position: absolute; /* Positioning */
   top: 80%; /* Top position */
-  right: 3%;
+  right: 40%;
   z-index: 8;
   text-align: left; /* Text alignment */
 }
@@ -498,7 +499,8 @@ button:focus {
 
 /* Button hover effect */
 .button:hover,
-.buttonG:hover{
+.buttonG:hover 
+#aboutButton {
   background-color: rgba(218, 103, 179, 0.425);
 }
 
