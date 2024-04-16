@@ -13,7 +13,7 @@
 
 
 
-## Realms of Reality Portal is a custom Chrome Extension that includes dynamic backgrounds, a weather widget, inspirational quotes, a time display, a google search bar, and a collection of useful links. The aim of this project is to provide users with a visually appealing and functional dashboard every time they open their browser.
+## Realms of Reality Portal is a custom Chrome Extension that includes dynamic backgrounds, a weather widget, inspirational quotes, a time display, a Google search bar, and a collection of useful links. This project aims to provide users with a visually appealing and functional dashboard every time they open their browsers and to challenge our perception of what reality truly means to us.
 
 ## Features💫💫💫
 
@@ -22,7 +22,11 @@
 - **Inspirational Quotes**: A random quote from a curated list is displayed to inspire users throughout their day.
 - **Time Display**: The current time is prominently displayed in a large, readable format.
 - **Google Search Bar**: Fully functional search bar.
-- **Useful Links**: Quick access buttons to the project maintainers' GitHub profiles, Tarot, Runes, I Ching, Planetary Positions & Transits, Horoscopes, Space News, and Scale of the Universe.
+- **Useful Links**: Quick access buttons to the project maintainers' GitHub profiles, Tarot, Runes, I Ching, Planetary Positions & Transits, Horoscopes, Space News, and Scale of the Universe. All are located in the hidden left-side menu, just hover over!
+
+![Screenshot (37)](https://github.com/Srixx24/Hacksprint/assets/144152489/6a3577c2-208c-4a9e-a411-96e2932b953d)
+
+
 
 ## Files💫💫💫
 
@@ -88,7 +92,8 @@
 
 -Step 8: From there you may open new tabs and enjoy our Chrome extension!
 
-![Step 10](https://github.com/Srixx24/Hacksprint/assets/144152489/f0c86007-ba64-4042-9ea9-62c3a20e195d)
+![Screenshot (36)](https://github.com/Srixx24/Hacksprint/assets/144152489/0565af9d-e72c-439d-a334-1bcd455d2e1b)
+
 
 
 ### Note: This extension will be available in the Chrome store soon! So steps 1-6 will be obsolete, you'll be able to get this free extension through Google's Chrome Web Store.
