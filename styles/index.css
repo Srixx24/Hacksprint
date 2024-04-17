@@ -17,7 +17,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  overflow: hidden; /* Prevent scrolling */
+  overflow: hidden;
 }
 
 /* Background image */
@@ -62,7 +62,7 @@ body {
 	padding-right: 2em; 
 }
 
-/* CSS for h2 elements */
+/* h2 elements */
 h2 {
   font-weight: 700; /* Set font weight to bold */
 }
@@ -74,7 +74,7 @@ h2 {
 
 /* Scrollbar thumb styles */
 ::-webkit-scrollbar-thumb {
-  background: rgba(199, 10, 199, 0.17); /* Set the background color of the scrollbar thumb */
+  background: rgba(199, 10, 199, 0); /* Set the background color of the scrollbar thumb */
   border-radius: 4px; /* Apply border radius to the scrollbar thumb */
 }
 
@@ -83,7 +83,7 @@ input:focus,
 select:focus,
 textarea:focus,
 button:focus {
-  outline: none; /* Remove the focus outline */
+  outline: none;
 }
 
 /* Background wrapper styles */
@@ -134,17 +134,6 @@ button:focus {
   font-size: 2vw; /* Font size */
   display: inline-block;
   vertical-align: middle; /* Aligns the text vertically */
-}
-
-
-/* Time widget element */
-.info {
-  color: rgba(255, 255, 255, 0.8); /* Text color */
-  font-family: "open sans"; /* Font family */
-  user-select: none; /* Prevent text selection */
-  font-weight: 340; /* Font weight */
-  font-size: calc(12px + .7vw); /* Font size */
-  cursor: pointer; /* Cursor style */
 }
 
 /* Search widget */
@@ -231,7 +220,6 @@ button:focus {
   margin-bottom: 1rem;
 }
 
-
 /* Right Menus */
 #rightMenus {
   padding-top: 10px; /* Top padding */
@@ -247,29 +235,6 @@ button:focus {
   font-size: 10px; /* Font size */
   font-family: "open sans"; /* Font family */
   transition: all .2s cubic-bezier(.68, -0.2, .27, 1.55); /* Transition */
-}
-
-/* Styles for bookmark folders */
-.bkFolder {
-  padding-left: 12px; /* Left padding */
-  padding-bottom: 5px; /* Bottom padding */
-}
-
-/* Styles for bookmark items within folders */
-.bkFolder .bkItem {
-  border-left: 1px solid white; /* Left border */
-  border-radius: 0px 4px 4px 0px; /* Border radius */
-}
-
-/* Styles for folder names */
-.folderName {
-  padding-left: 0px; /* Left padding */
-  color: white; /* Text color */
-  cursor: pointer; /* Cursor style */
-  padding-left: 7px; /* Left padding */
-  padding-top: 7px; /* Top padding */
-  padding-bottom: 8px; /* Bottom padding */
-  user-select: none; /* Disable text selection */
 }
 
 /* Styles for the hidden menu container */
@@ -302,11 +267,7 @@ button:focus {
 
 /* Show menu elements on hover or delay */
 #menu:hover .menuText,
-#menu:hover .sliderWrapper,
-#menu:hover .slidecontainer,
 #menu.delay .menuText,
-#menu.delay .sliderWrapper,
-#menu.delay .slidecontainer,
 #buttonG:hover .aboutButton,
 #buttonG.delay .aboutButton {
   opacity: 0.9 !important; /* Opacity */
@@ -315,9 +276,7 @@ button:focus {
 }
 
 /* Our repo stuff */
-.menuText,
-.sliderWrapper,
-.slidecontainer {
+.menuText {
   position: absolute;
   top: 0;
   left: 0;
@@ -478,22 +437,6 @@ button:focus {
   right: 25%;
   z-index: 8;
   text-align: left; /* Text alignment */
-}
-
-#infomenu {
-  padding: 5px; /* Padding */
-  border-radius: 7px; /* Border radius */
-  color: rgba(66, 59, 59, 0.822); /* Text color */
-  background-color: rgba(255, 255, 255, 0.527) !important; /* Background color */
-  font-size: 20px; /* Font size */
-  font-family: "HelveticaNeue-Light", "open sans Light", "open sans", Helvetica, Arial, "Lucida Grande", sans-serif; /* Font family */
-  font-weight: 100; /* Font weight */
-  width: 18vw; /* Width */
-  border-color: rgba(79, 3, 122, 0.815) !important; /* Border color */
-  position: absolute; /* Positioning */
-  top: 50%; /* Top position */
-  left: 50%; /* Left position */
-
 }
 
 /* Button hover effect */

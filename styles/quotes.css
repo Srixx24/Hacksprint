@@ -3,9 +3,9 @@
 
 #quote-container {
   position: fixed;
-  bottom: calc(25vh + 20px); /* 1/4 up from the bottom */
+  bottom: calc(25vh + 20px);
   right: 20px;
-  width: calc(100% - 40px); /* Add a width to constrain the text */
+  width: calc(100% - 40px);
   font-size: 2vw;
   font-weight: 700;
   margin: 0;
