@@ -462,7 +462,7 @@ button:focus {
 
 #aboutButton {
   margin-left: -34px;
-  margin-top: 294px;
+  margin-top: 12vw;
   display: inline;
   padding: 1vw; /* Padding */
   border-radius: 48vw; /* Border radius */
